@@ -9,20 +9,22 @@ import WineDetailsPage from './pages/WineDetailsPage/WineDetailsPage';
 import NotFoundPage from "./pages/NotFoundPage/NotFoundPage"
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import './App.css';
+import Header from './components/Header/Header';
 
 
 function App() {
   return (
     <BrowserRouter>
+      <Header />
       <Routes>
         <Route path='/' element={<HomePage />} />
-        <Route path='/About' element={<AboutPage />} />
-        <Route path='/FindUs' element={<FindUsPage />} />
-        <Route path='/Listing' element={<ListingPage />} />
-        <Route path='/Producers' element={<ProducersPage />} />
-        <Route path='/Producers/:producerId' element={<ProducerDetailsPage />} />
-        <Route path='/Wines' element={<WinesPage />} />
-        <Route path='/Wines/:wineId' element={<WineDetailsPage />} />
+        <Route path='/about' element={<AboutPage />} />
+        <Route path='/findUs' element={<FindUsPage />} />
+        <Route path='/listing' element={<ListingPage />} />
+        <Route path='/producers' element={<ProducersPage />} />
+        <Route path='/producers/:producerId' element={<ProducerDetailsPage />} />
+        <Route path='/wines' element={<WinesPage />} />
+        <Route path='/wines/:wineId' element={<WineDetailsPage />} />
         <Route path='/*' element={<NotFoundPage />} />
       </Routes>
     </BrowserRouter>

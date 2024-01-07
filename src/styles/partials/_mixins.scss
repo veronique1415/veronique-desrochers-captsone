@@ -19,6 +19,37 @@
   }
 }
 
+@mixin font-header {
+  font-size: clamp(1.5rem, 1rem + 2.5vw, 4rem);
+  line-height: 2rem;
+}
+
+@mixin font-section {
+  font-size: clamp(1rem, 0.7rem + 1.5vw, 2.5rem);
+  line-height: 1.125rem;
+}
+
+@mixin font-subheader {
+  font-size: clamp(1rem, 0.8rem + 1vw, 2rem);
+  line-height: 1.125rem;
+}
+
+@mixin font-body {
+  font-size: clamp(0.875rem, 0.77rem + 0.525vw, 1.4rem);
+  line-height: 1.125rem;
+}
+
+@mixin backgroundGradient {
+  background: rgb(255, 255, 255);
+  background: linear-gradient(
+    0deg,
+    rgba(255, 255, 255, 1) 0%,
+    rgba(250, 252, 252, 1) 4%,
+    rgba(181, 211, 213, 1) 61%,
+    rgba(181, 211, 213, 1) 86%
+  );
+}
+
 //mixins for mobile font size
 @mixin page-header-mobile-font {
   font-size: 1.5rem;
@@ -65,15 +96,4 @@
 @mixin label-button-desktab-font {
   font-size: 0.75rem;
   line-height: 1.25rem;
-}
-
-@mixin backgroundGradient {
-  background: rgb(255, 255, 255);
-  background: linear-gradient(
-    0deg,
-    rgba(255, 255, 255, 1) 0%,
-    rgba(250, 252, 252, 1) 4%,
-    rgba(181, 211, 213, 1) 61%,
-    rgba(181, 211, 213, 1) 86%
-  );
 }

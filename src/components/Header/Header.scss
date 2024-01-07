@@ -1,0 +1,17 @@
+@use '../../styles/partials/globals';
+@use '../../styles/partials/variables' as *;
+@use '../../styles/partials/mixins' as *;
+
+.header {
+  border-top: 2px solid black;
+  border-bottom: 2px solid black;
+  display: flex;
+  align-items: center;
+
+  &__heading {
+    padding-left: $Mobile-between-components;
+    width: 70%;
+    @include font-header;
+    font-family: 'DM Serif', serif;
+  }
+}

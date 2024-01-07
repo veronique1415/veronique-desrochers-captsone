@@ -1,0 +1,38 @@
+@use '../../styles/partials/globals';
+@use '../../styles/partials/variables' as *;
+@use '../../styles/partials/mixins' as *;
+
+.nav {
+  width: 40%;
+  &__item {
+    border: 2px solid black;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+}
+.search {
+  width: 20%;
+  &__button {
+    border: none;
+    background-color: $Primary-beige;
+  }
+
+  &__input {
+    display: none;
+  }
+}
+
+.menu {
+  width: 20%;
+  &__button {
+    border: none;
+    font-weight: 700;
+    text-transform: uppercase;
+    font-size: clamp(0.875rem, 0.77rem + 0.525vw, 1.4rem);
+  }
+
+  &__list {
+    display: none;
+  }
+}
