@@ -1,0 +1,29 @@
+@use './fonts';
+@use './mixins' as *;
+@use './variables' as *;
+
+html {
+  box-sizing: border-box;
+}
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
+body {
+  font-family: 'Avenir', Arial, Helvetica, sans-serif;
+  color: $Primary-black;
+}
+
+body,
+h1,
+h2,
+h3,
+p,
+ul,
+li,
+div,
+button {
+  margin: 0;
+}
