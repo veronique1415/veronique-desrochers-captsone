@@ -1,3 +1,11 @@
+@use './styles/partials/globals';
+@use './styles/partials/mixins' as *;
+@use './styles/partials/variables' as *;
+
+body {
+  background-color: $Primary-beige;
+}
+
 .App {
   text-align: center;
 }
