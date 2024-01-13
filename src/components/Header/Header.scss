@@ -3,15 +3,30 @@
 @use '../../styles/partials/mixins' as *;
 
 .header {
-  border-top: 2px solid black;
-  border-bottom: 2px solid black;
-  display: flex;
-  align-items: center;
+  @include border-tb;
 
   &__heading {
-    padding-left: $Mobile-between-components;
-    width: 70%;
     @include font-header;
     font-family: 'DM Serif', serif;
   }
+}
+
+.col__search {
+  border-left: 2px solid black;
+  border-right: 2px solid black;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.search__button {
+  border: none;
+  background-color: $Primary-beige;
+}
+
+.col__menu {
+  border-right: 2px solid black;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }

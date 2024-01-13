@@ -97,3 +97,8 @@
   font-size: 0.75rem;
   line-height: 1.25rem;
 }
+
+@mixin border-tb {
+  border-top: 2px solid black;
+  border-bottom: 2px solid black;
+}
