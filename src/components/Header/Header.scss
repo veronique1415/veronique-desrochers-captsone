@@ -3,7 +3,8 @@
 @use '../../styles/partials/mixins' as *;
 
 .header {
-  @include border-tb;
+  @include border-top-bottom;
+  @include border-left;
 
   &__heading {
     @include font-header;
@@ -12,8 +13,7 @@
 }
 
 .col__search {
-  border-left: 2px solid black;
-  border-right: 2px solid black;
+  @include border-left;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -25,7 +25,7 @@
 }
 
 .col__menu {
-  border-right: 2px solid black;
+  @include border-right;
   display: flex;
   align-items: center;
   justify-content: center;

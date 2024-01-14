@@ -1,7 +1,8 @@
 import searchIcon from "../../assets/icons/search-icon.png"
 import { Link } from "react-router-dom"
-import { DropdownItem, NavDropdown, Container, Row, Col} from "react-bootstrap"
+import { Container, Row, Col} from "react-bootstrap"
 import "./Header.scss"
+import SideNav from "../SideNav/SideNav"
 
 
 const Header = () => {
@@ -16,30 +17,11 @@ const Header = () => {
                     <Col xs={2} md={1} className="col__search">
                         <button className="search__button search__buton--hidden"><img className="search__icon  search__icon--hidden" src={searchIcon} alt="search icon"></img></button>
                     </Col>
-                    <Col xs={2} md={1}className="col__menu py-3">
-                        
-                        <NavDropdown className="nav__dropdown">
-                            <ul>
-                                <li><DropdownItem>
-                                    <Link to={"/about"}>About</Link>
-                                </DropdownItem></li>
-                                <li><DropdownItem>
-                                    <Link to={"/producers"}>Producers</Link>
-                                </DropdownItem></li>
-                                <li><DropdownItem>
-                                    <Link to={"/wines"}>Wines</Link>
-                                </DropdownItem></li>
-                                <li><DropdownItem>
-                                    <Link to={"/findUs"}>Find us</Link>
-                                </DropdownItem></li>
-                                <li><DropdownItem>
-                                    <Link to={"/listing"}>Listing</Link>
-                                </DropdownItem></li>
-                                </ul>
-                            </NavDropdown>
+                    <Col xs={2} md={1}className="col__menu">
+                        <SideNav/>
                         </Col>
                     </Row>
-                </Container>
+                </Container>    
             </nav>
         </header>
     )

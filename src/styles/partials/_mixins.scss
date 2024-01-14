@@ -98,7 +98,33 @@
   line-height: 1.25rem;
 }
 
-@mixin border-tb {
+//border mixins
+@mixin border-top-bottom {
   border-top: 2px solid black;
   border-bottom: 2px solid black;
+}
+
+@mixin border-left {
+  border-left: 2px solid black;
+}
+
+@mixin border-right {
+  border-left: 2px solid black;
+}
+
+@mixin border-top {
+  border-top: 2px solid black;
+}
+
+@mixin border-bottom {
+  border-bottom: 2px solid black;
+}
+
+@mixin border-left-right {
+  border-left: 2px solid black;
+  border-right: 2px solid black;
+}
+
+@mixin border-all {
+  border: 2px solid black;
 }

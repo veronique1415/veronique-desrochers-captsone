@@ -1,0 +1,45 @@
+@use '../../styles/partials/globals';
+@use '../../styles/partials/variables' as *;
+@use '../../styles/partials/mixins' as *;
+.sidenav {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  &__button {
+    background-color: $Primary-beige;
+    border: none;
+    color: black;
+
+    &:hover {
+      background-color: $Secondary-beige;
+    }
+  }
+
+  &__modal {
+    background-color: $Secondary-beige;
+    @include border-top-bottom;
+    &--header {
+      @include border-left;
+    }
+
+    &--body {
+      @extend .sidenav__modal--header;
+    }
+  }
+
+  &__list {
+    list-style-type: none;
+    text-transform: uppercase;
+  }
+
+  &__item {
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+  }
+
+  &__link {
+    text-decoration: none;
+    color: black;
+  }
+}
