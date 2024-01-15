@@ -2,7 +2,7 @@
 import {Container, Row, Col} from "react-bootstrap"
 import "./Banner.scss"
 
-const Banner = ({text, h}) => {
+const Banner = ({text}) => {
   return (
     <Container className="mw-100 my-4">
         <Row>
