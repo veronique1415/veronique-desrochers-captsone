@@ -37,7 +37,7 @@
 
 @mixin font-body {
   font-size: clamp(0.5rem, 0.77rem + 0.525vw, 1.4rem);
-  line-height: 1.125rem;
+  line-height: 1.3rem;
 }
 
 @mixin backgroundGradient {
