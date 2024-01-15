@@ -8,7 +8,7 @@ import SideNav from "../SideNav/SideNav"
 const Header = () => {
     return (
         <header className="header">
-            <nav>
+            <nav className="nav">
             <Container style={{ marginRight: 0}} className="mw-100">
                 <Row className="pr-0">
                     <Col className="header__container py-3" xs={8} md={10}>

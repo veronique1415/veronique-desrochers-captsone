@@ -3,7 +3,10 @@
 @use '../../styles/partials/mixins' as *;
 
 .header {
+  background-color: $Primary-beige;
   @include border-top-bottom;
+  position: sticky;
+  top: 0;
 
   &__heading {
     @include font-header;

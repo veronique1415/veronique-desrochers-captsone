@@ -1,4 +1,5 @@
 import {Container, Row, Col, Card} from "react-bootstrap"
+import { Link } from "react-router-dom"
 import Bottle1 from "../../assets/images/CadeNociO.jpg"
 import Bottle2 from "../../assets/images/CadeNociO2.jpg"
 import Bottle3 from "../../assets/images/VenierR.jpg"
@@ -13,58 +14,58 @@ const NewIn = () => {
             <Container fluid className="py-3">
                 <Row xs={2} sm={3} md={4} lg={5} className="image__flex-container">
                     <Col className="py-1">
-                    <Card className="card">
-                        <Card.Img src={Bottle1}/>
-                        <Card.ImgOverlay className="card__overview">
-                            <h3>Ca de Noci</h3>
-                            <p>Amazing product</p>
-                        </Card.ImgOverlay>
-                    </Card>
+                        <Link to={"/wines"}><Card>
+                            <Card.Img src={Bottle5}/>
+                            <Card.ImgOverlay className="card__overview">
+                                <h3>Ca de Noci</h3>
+                                <p>Amazing product</p>
+                            </Card.ImgOverlay>
+                        </Card></Link>
                     </Col>
                     <Col className="py-1">
-                    <Card>
-                        <Card.Img src={Bottle1}/>
-                        <Card.ImgOverlay className="card__overview">
-                            <h3>Ca de Noci</h3>
-                            <p>Amazing product</p>
-                        </Card.ImgOverlay>
-                    </Card>
+                        <Link to={"/wines"}><Card>
+                            <Card.Img src={Bottle1}/>
+                            <Card.ImgOverlay className="card__overview">
+                                <h3>Ca de Noci</h3>
+                                <p>Amazing product</p>
+                            </Card.ImgOverlay>
+                    </Card></Link>
                     </Col>
                     <Col className="py-1">
-                    <Card>
-                        <Card.Img src={Bottle2}/>
-                        <Card.ImgOverlay className="card__overview">
-                            <h3>Ca de Noci</h3>
-                            <p>Amazing product</p>
-                        </Card.ImgOverlay>
-                    </Card>
+                        <Link to={"/wines"}><Card>
+                            <Card.Img src={Bottle2}/>
+                            <Card.ImgOverlay className="card__overview">
+                                <h3>Ca de Noci</h3>
+                                <p>Amazing product</p>
+                            </Card.ImgOverlay>
+                    </Card></Link>
                     </Col>
                     <Col className="py-1">
-                    <Card>
-                        <Card.Img src={Bottle3}/>
-                        <Card.ImgOverlay className="card__overview">
+                        <Link to={"/wines"}><Card>
+                            <Card.Img src={Bottle3}/>
+                            <Card.ImgOverlay className="card__overview">
                             <h3>Ca de Noci</h3>
                             <p>Amazing product</p>
                         </Card.ImgOverlay>
-                    </Card>
+                    </Card></Link>
                     </Col>
                     <Col className="py-1">
-                    <Card>
-                        <Card.Img src={Bottle4}/>
+                    <Link to={"/wines"}><Card>
+                       <Card.Img src={Bottle4}/>
                         <Card.ImgOverlay className="card__overview">
                             <h3>Ca de Noci</h3>
                             <p>Amazing product</p>
                         </Card.ImgOverlay>
-                    </Card>
+                    </Card></Link>
                     </Col>
                     <Col className="py-1">
-                    <Card>
-                        <Card.Img src={Bottle5}/>
+                    <Link to={"/wines"}><Card>
+                       <Card.Img src={Bottle5}/>
                         <Card.ImgOverlay className="card__overview">
                             <h3>Ca de Noci</h3>
                             <p>Amazing product</p>
                         </Card.ImgOverlay>
-                    </Card>
+                    </Card></Link>
                     </Col>
                 </Row>
             </Container>
