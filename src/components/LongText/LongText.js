@@ -5,7 +5,7 @@ const LongText = ({p1, p2, p3}) => {
   return (
     <Container>
             <Row>
-                 <Col className="paragraph__container p-3">
+                 <Col className="paragraph__container p-3 mx-2">
                     <Stack gap={3}>
                         <p>{p1}</p>
                         <p>{p2}</p>

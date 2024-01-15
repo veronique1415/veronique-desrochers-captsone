@@ -1,7 +1,7 @@
 import Banner from "../Banner/Banner";
 import Larry from "../../assets/images/IMG_1604.jpeg"
 import John from "../../assets/images/IMG_1588.jpeg"
-import { Container, Card, Col, Row, CardBody, CardText } from "react-bootstrap";
+import { Container, Card, Col, Row } from "react-bootstrap";
 import "./About.scss"
 import LongText from "../LongText/LongText";
 
