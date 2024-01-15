@@ -2,8 +2,8 @@
 @use '../../styles/partials/variables' as *;
 @use '../../styles/partials/mixins' as *;
 
-.about-card {
-  &__container {
-    text-align: center;
-  }
+.paragraph__container {
+  border-radius: 10px;
+  @include border-all;
+  @include font-body;
 }
