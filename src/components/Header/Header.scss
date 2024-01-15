@@ -1,0 +1,32 @@
+@use '../../styles/partials/globals';
+@use '../../styles/partials/variables' as *;
+@use '../../styles/partials/mixins' as *;
+
+.header {
+  @include border-top-bottom;
+  @include border-left;
+
+  &__heading {
+    @include font-header;
+    font-family: 'DM Serif', serif;
+  }
+}
+
+.col__search {
+  @include border-left;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.search__button {
+  border: none;
+  background-color: $Primary-beige;
+}
+
+.col__menu {
+  @include border-right;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}

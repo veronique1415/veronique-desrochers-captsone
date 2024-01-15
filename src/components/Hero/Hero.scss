@@ -1,0 +1,19 @@
+@use '../../styles/partials/globals';
+@use '../../styles/partials/variables' as *;
+@use '../../styles/partials/mixins' as *;
+
+.hero {
+  text-align: center;
+  &__heading {
+    @include border-top-bottom;
+    padding: 1rem;
+  }
+  &__image {
+    border-radius: 10px;
+    width: 90%;
+
+    &--container {
+      padding: 0;
+    }
+  }
+}
