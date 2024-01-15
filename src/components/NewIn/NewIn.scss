@@ -2,6 +2,18 @@
 @use '../../styles/partials/variables' as *;
 @use '../../styles/partials/mixins' as *;
 
-.image__flex-container {
-  gap: 0.2rem;
+.card {
+  overflow: hidden;
+
+  &__overview {
+    @include backgroundGradient;
+    opacity: 0.8;
+    transform: translateY(101%);
+    overflow-y: auto;
+    transition: transform 0.3s ease-in;
+  }
+}
+
+.card:hover .card__overview {
+  transform: translateY(0);
 }

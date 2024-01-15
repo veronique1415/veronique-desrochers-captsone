@@ -9,37 +9,61 @@ import "./NewIn.scss"
 
 const NewIn = () => {
   return <section className="newIn">
-            <Banner text={"New bottles that just came in"} />
+            <Banner text={"New arrivals"} />
             <Container fluid className="py-3">
-                <Row className="image__flex-container">
-                    <Col>
-                    <Card>
+                <Row xs={2} sm={3} md={4} lg={5} className="image__flex-container">
+                    <Col className="py-1">
+                    <Card className="card">
                         <Card.Img src={Bottle1}/>
+                        <Card.ImgOverlay className="card__overview">
+                            <h3>Ca de Noci</h3>
+                            <p>Amazing product</p>
+                        </Card.ImgOverlay>
                     </Card>
                     </Col>
-                    <Col>
+                    <Col className="py-1">
                     <Card>
                         <Card.Img src={Bottle1}/>
+                        <Card.ImgOverlay className="card__overview">
+                            <h3>Ca de Noci</h3>
+                            <p>Amazing product</p>
+                        </Card.ImgOverlay>
                     </Card>
                     </Col>
-                    <Col>
+                    <Col className="py-1">
                     <Card>
                         <Card.Img src={Bottle2}/>
+                        <Card.ImgOverlay className="card__overview">
+                            <h3>Ca de Noci</h3>
+                            <p>Amazing product</p>
+                        </Card.ImgOverlay>
                     </Card>
                     </Col>
-                    <Col>
+                    <Col className="py-1">
                     <Card>
                         <Card.Img src={Bottle3}/>
+                        <Card.ImgOverlay className="card__overview">
+                            <h3>Ca de Noci</h3>
+                            <p>Amazing product</p>
+                        </Card.ImgOverlay>
                     </Card>
                     </Col>
-                    <Col>
+                    <Col className="py-1">
                     <Card>
                         <Card.Img src={Bottle4}/>
+                        <Card.ImgOverlay className="card__overview">
+                            <h3>Ca de Noci</h3>
+                            <p>Amazing product</p>
+                        </Card.ImgOverlay>
                     </Card>
                     </Col>
-                    <Col>
+                    <Col className="py-1">
                     <Card>
                         <Card.Img src={Bottle5}/>
+                        <Card.ImgOverlay className="card__overview">
+                            <h3>Ca de Noci</h3>
+                            <p>Amazing product</p>
+                        </Card.ImgOverlay>
                     </Card>
                     </Col>
                 </Row>
