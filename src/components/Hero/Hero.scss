@@ -5,6 +5,7 @@
 .hero {
   text-align: center;
   &__heading {
+    @include font-section;
     @include border-top-bottom;
     padding: 1rem;
   }
