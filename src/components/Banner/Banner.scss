@@ -2,14 +2,9 @@
 @use '../../styles/partials/variables' as *;
 @use '../../styles/partials/mixins' as *;
 
-.hero {
+.banner__heading {
   text-align: center;
-  &__image {
-    border-radius: 10px;
-    width: 90%;
-
-    &--container {
-      padding: 0;
-    }
-  }
+  @include font-section;
+  @include border-top-bottom;
+  padding: 1rem;
 }

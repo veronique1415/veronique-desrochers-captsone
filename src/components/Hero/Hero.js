@@ -1,22 +1,13 @@
-// import CarouselComp from "../Carousel/Carousel";
+import Banner from "../Banner/Banner";
 import InsideGia from "../../assets/images/Screenshot 2023-12-19 at 8.18.02 AM.jpeg"
 import {Container, Row, Col, Image} from "react-bootstrap"
 import "./Hero.scss"
 
-const Hero = () => {
-//carousel of pictures ?    
+const Hero = () => {  
   return (
     <>
     <section className="hero">
-    <Container className="hero__heading--container mw-100 my-4">
-        <Row>
-            <Col className="hero__heading--container p-0">
-            <h2 className="hero__heading">
-                Small private import company, truly grand products. 
-            </h2>
-            </Col>
-        </Row>
-    </Container>
+    <Banner text={"Small private import company, truly grand products."}/>
     <Container className="mx-auto py-2" fluid >
         <Row className="justify-content-md-center">
             <Col>

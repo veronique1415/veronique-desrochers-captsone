@@ -12,7 +12,7 @@ const Header = () => {
             <Container style={{ marginRight: 0}} className="mw-100">
                 <Row className="pr-0">
                     <Col className="header__container py-3" xs={8} md={10}>
-                        <Link to={"/"} className="header__heading"><h2 className="header__heading">Grand Ordinaire.</h2></Link>
+                        <Link to={"/"} className="header__heading"><h1 className="header__heading">Grand Ordinaire.</h1></Link>
                     </Col>
                     <Col xs={2} md={1} className="col__search">
                         <button className="search__button search__buton--hidden"><img className="search__icon  search__icon--hidden" src={searchIcon} alt="search icon"></img></button>
