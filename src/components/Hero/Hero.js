@@ -11,9 +11,9 @@ const Hero = () => {
     <Container className="hero__heading--container mw-100 my-4">
         <Row>
             <Col className="hero__heading--container p-0">
-            <h1 className="hero__heading">
+            <h2 className="hero__heading">
                 Small private import company, truly grand products. 
-            </h1>
+            </h2>
             </Col>
         </Row>
     </Container>

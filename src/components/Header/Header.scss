@@ -8,6 +8,8 @@
 
   &__heading {
     @include font-header;
+    text-decoration: none;
+    color: black;
     font-family: 'DM Serif', serif;
   }
 }
