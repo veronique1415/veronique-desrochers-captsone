@@ -1,6 +1,9 @@
+import ProducerDetails from "../../components/ProducerDetails/ProducerDetails";
 const ProducerDetailsPage = () => {
     return (
-        <div>Producer Details Page</div>
+        <main>
+            <ProducerDetails />
+        </main>
     )
 }
 
