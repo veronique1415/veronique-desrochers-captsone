@@ -1,3 +1,29 @@
 @use '../../styles/partials/globals';
 @use '../../styles/partials/variables' as *;
 @use '../../styles/partials/mixins' as *;
+
+.footer {
+  @include border-top-bottom;
+
+  &__containers {
+    @include border-right;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  &__list {
+    list-style-type: none;
+    text-transform: uppercase;
+    @include font-body;
+  }
+
+  &__link {
+    text-decoration: none;
+    color: black;
+  }
+
+  &__email {
+    border: none;
+    background-color: $Primary-beige;
+  }
+}

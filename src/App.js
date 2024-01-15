@@ -8,9 +8,11 @@ import ProducerDetailsPage from './pages/ProducerDetailsPage/ProducerDetailsPage
 import WinesPage from './pages/WinesPage/WinesPage';
 import WineDetailsPage from './pages/WineDetailsPage/WineDetailsPage';
 import NotFoundPage from "./pages/NotFoundPage/NotFoundPage"
+import Footer from './components/Footer/Footer';
 import 'bootstrap/dist/css/bootstrap.min.css'
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import './App.scss';
+
 
 
 
@@ -29,6 +31,7 @@ function App() {
         <Route path='/wines/:wineId' element={<WineDetailsPage />} />
         <Route path='/*' element={<NotFoundPage />} />
       </Routes>
+      <Footer />
     </BrowserRouter>
   );
 }

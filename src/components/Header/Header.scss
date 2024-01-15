@@ -14,23 +14,23 @@
     color: black;
     font-family: 'DM Serif', serif;
   }
-}
 
-.col__search {
-  @include border-left;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  &__search {
+    @include border-left;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  &__menu {
+    @include border-right;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
 }
 
 .search__button {
   border: none;
   background-color: $Primary-beige;
-}
-
-.col__menu {
-  @include border-right;
-  display: flex;
-  align-items: center;
-  justify-content: center;
 }
