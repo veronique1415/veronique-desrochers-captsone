@@ -20,10 +20,18 @@
   &__link {
     text-decoration: none;
     color: black;
+
+    &:hover {
+      text-decoration: underline;
+    }
   }
 
   &__email {
     border: none;
     background-color: $Primary-beige;
   }
+}
+
+.first {
+  border-left: none;
 }

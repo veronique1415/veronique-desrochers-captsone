@@ -10,8 +10,8 @@ const Footer = () => {
   return (
     <footer className="footer">
         <Container style={{ marginRight: 0}} className="mw-100">
-            <Row>
-                <Col className="footer__containers">
+            <Row xs={3}>
+                <Col className="footer__containers first">
                     <ul className="footer__list">
                         <li className="footer__item"><Link to={"/about"} className="footer__link">About</Link></li>
                         <li className="footer__item"><Link to={"/producers"} className="footer__link">Producers</Link></li>

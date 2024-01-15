@@ -6,6 +6,7 @@
   background-color: $Primary-beige;
   @include border-top-bottom;
   position: sticky;
+  z-index: 1;
   top: 0;
 
   &__heading {
