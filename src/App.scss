@@ -4,6 +4,7 @@
 
 body {
   background-color: $Primary-beige;
+  @include border-left-right;
 }
 
 .App {

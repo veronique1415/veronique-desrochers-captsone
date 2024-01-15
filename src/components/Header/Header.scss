@@ -4,7 +4,6 @@
 
 .header {
   @include border-top-bottom;
-  @include border-left;
 
   &__heading {
     @include font-header;
