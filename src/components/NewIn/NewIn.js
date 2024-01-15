@@ -11,7 +11,7 @@ import "./NewIn.scss"
 const NewIn = () => {
   return <section className="newIn">
             <Banner text={"New arrivals"} />
-            <Container fluid className="py-3">
+            <Container fluid className="py-2 pb-4">
                 <Row xs={2} sm={3} md={4} lg={5} className="image__flex-container">
                     <Col className="py-1">
                         <Link to={"/wines"}><Card>
