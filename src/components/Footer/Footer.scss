@@ -34,4 +34,9 @@
 
 .first {
   border-left: none;
+  padding-right: 2rem;
+
+  @include tablet {
+    padding-right: 0;
+  }
 }
