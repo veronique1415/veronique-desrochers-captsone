@@ -1,6 +1,11 @@
+import Producers from "../../components/Producers/Producers";
+
 const ProducersPage = () => {
     return (
-        <div>Producers Page</div>
+        <main>
+            <Producers />
+        </main>
+        
     )
 }
 

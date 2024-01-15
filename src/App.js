@@ -26,7 +26,7 @@ function App() {
         <Route path='/findUs' element={<FindUsPage />} />
         <Route path='/listing' element={<ListingPage />} />
         <Route path='/producers' element={<ProducersPage />} />
-        <Route path='/producers/:producerId' element={<ProducerDetailsPage />} />
+        <Route path='/producers/details' element={<ProducerDetailsPage />} />
         <Route path='/wines' element={<WinesPage />} />
         <Route path='/wines/:wineId' element={<WineDetailsPage />} />
         <Route path='/*' element={<NotFoundPage />} />
