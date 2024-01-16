@@ -28,7 +28,7 @@ function App() {
         <Route path='/producers' element={<ProducersPage />} />
         <Route path='/producers/details' element={<ProducerDetailsPage />} />
         <Route path='/wines' element={<WinesPage />} />
-        <Route path='/wines/:wineId' element={<WineDetailsPage />} />
+        <Route path='/wines/details' element={<WineDetailsPage />} />
         <Route path='/*' element={<NotFoundPage />} />
       </Routes>
       <Footer />
