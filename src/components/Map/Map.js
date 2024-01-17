@@ -29,140 +29,151 @@ const MapComp = () => {
   
 
   //state for information window
-  const [open, setOpen] = useState(false);
+  const [vlOpen, vlSetOpen] = useState(false);
+  const [slOpen, slSetOpen] = useState(false);
+  const [cmOpen, cmSetOpen] = useState(false);
+  const [vinoOpen, vinoSetOpen] = useState(false);
+  const [marOpen, marSetOpen] = useState(false);
+  const [masOpen, masSetOpen] = useState(false);
+  const [elOpen, elSetOpen] = useState(false);
+  const [noOpen, noSetOpen] = useState(false);
+  const [gOpen, gSetOpen] = useState(false);
+  const [liOpen, liSetOpen] = useState(false);
+  const [vpOpen, vpSetOpen] = useState(false);
+  const [jbOpen, jbSetOpen] = useState(false);
 
   return (
     <article className="map__container">
       <APIProvider apiKey={process.env.REACT_APP_GOOGLE_MAPS_KEY}>
         <div className="map">
           <Map zoom={13} center={position} mapId={process.env.REACT_APP_GOOGLE_MAPS_STYLE}>
-            <AdvancedMarker position={vinMonLapin} onClick={() => setOpen(true)}>
+            <AdvancedMarker position={vinMonLapin} onClick={() => vlSetOpen(true)}>
               <Pin />
             </AdvancedMarker>
 
-            {open && (
-              <InfoWindow position={vinMonLapin} onCloseClick={() => setOpen(false)}>
+            {vlOpen && (
+              <InfoWindow position={vinMonLapin} onCloseClick={() => vlSetOpen(false)}>
                 <p>Mon Lapin</p>
                 <p>150 Rue Saint-Zotique East,</p>
                 <p>Montréal, QC H2S 1K8</p>
              </InfoWindow>
             )}
-            <AdvancedMarker position={salleClim} onClick={() => setOpen(true)}>
+            <AdvancedMarker position={salleClim} onClick={() => slSetOpen(true)}>
               <Pin />
             </AdvancedMarker>
 
-            {open && (
-              <InfoWindow position={salleClim} onCloseClick={() => setOpen(false)}>
+            {slOpen && (
+              <InfoWindow position={salleClim} onCloseClick={() => slSetOpen(false)}>
                 <p>Salle Climatisée</p>
                 <p>6448 Boul. Saint-Laurent,</p>
                 <p>Montréal, QC H2S 3C4</p>
              </InfoWindow>
             )}
-            <AdvancedMarker position={caveDeMamie} onClick={() => setOpen(true)}>
+            <AdvancedMarker position={caveDeMamie} onClick={() => cmSetOpen(true)}>
               <Pin />
             </AdvancedMarker>
 
-            {open && (
-              <InfoWindow position={caveDeMamie} onCloseClick={() => setOpen(false)}>
+            {cmOpen && (
+              <InfoWindow position={caveDeMamie} onCloseClick={() => cmSetOpen(false)}>
                 <p>La Cave de Mamie</p>
                 <p>322 Rue Beaubien E,</p>
                 <p>Montréal, QC H2S 1R8</p>
              </InfoWindow>
             )}
-            <AdvancedMarker position={vinoRama} onClick={() => setOpen(true)}>
+            <AdvancedMarker position={vinoRama} onClick={() => vinoSetOpen(true)}>
               <Pin />
             </AdvancedMarker>
 
-            {open && (
-              <InfoWindow position={vinoRama} onCloseClick={() => setOpen(false)}>
+            {vinoOpen && (
+              <InfoWindow position={vinoRama} onCloseClick={() => vinoSetOpen(false)}>
                 <p>Vino Rama</p>
                 <p>Rue Beaubien Est,</p>
                 <p>Montréal, QC H2S 3C4</p>
              </InfoWindow>
             )}
-            <AdvancedMarker position={marelle} onClick={() => setOpen(true)}>
+            <AdvancedMarker position={marelle} onClick={() => marSetOpen(true)}>
               <Pin />
             </AdvancedMarker>
 
-            {open && (
-              <InfoWindow position={marelle} onCloseClick={() => setOpen(false)}>
+            {marOpen && (
+              <InfoWindow position={marelle} onCloseClick={() => marSetOpen(false)}>
                 <p>La Marelle</p>
                 <p>129 Rue Beaubien O,</p>
                 <p>Montréal, QC H2V 1C3</p>
              </InfoWindow>
             )}
-            <AdvancedMarker position={mastard} onClick={() => setOpen(true)}>
+            <AdvancedMarker position={mastard} onClick={() => masSetOpen(true)}>
               <Pin />
             </AdvancedMarker>
 
-            {open && (
-              <InfoWindow position={mastard} onCloseClick={() => setOpen(false)}>
+            {masOpen && (
+              <InfoWindow position={mastard} onCloseClick={() => masSetOpen(false)}>
                 <p>Mastard</p>
                 <p>1879 Rue Bélanger,</p>
                 <p>Montréal, QC H2G 1B6</p>
              </InfoWindow>
             )}
-            <AdvancedMarker position={elena} onClick={() => setOpen(true)}>
+            <AdvancedMarker position={elena} onClick={() => elSetOpen(true)}>
               <Pin />
             </AdvancedMarker>
 
-            {open && (
-              <InfoWindow position={elena} onCloseClick={() => setOpen(false)}>
+            {elOpen && (
+              <InfoWindow position={elena} onCloseClick={() => elSetOpen(false)}>
                 <p>Elena</p>
                 <p>5090 R. Notre Dame O,</p>
                 <p>Montréal, QC H4C 1T1</p>
              </InfoWindow>
             )}
-            <AdvancedMarker position={noraGray} onClick={() => setOpen(true)}>
+            <AdvancedMarker position={noraGray} onClick={() => noSetOpen(true)}>
               <Pin />
             </AdvancedMarker>
 
-            {open && (
-              <InfoWindow position={noraGray} onCloseClick={() => setOpen(false)}>
+            {noOpen && (
+              <InfoWindow position={noraGray} onCloseClick={() => noSetOpen(false)}>
                 <p>Nora Gray</p>
                 <p>1391 Rue Saint-Jacques,</p>
                 <p>Montréal, QC H3C 1H2</p>
              </InfoWindow>
             )}
-            <AdvancedMarker position={gia} onClick={() => setOpen(true)}>
+            <AdvancedMarker position={gia} onClick={() => gSetOpen(true)}>
               <Pin />
             </AdvancedMarker>
 
-            {open && (
-              <InfoWindow position={gia} onCloseClick={() => setOpen(false)}>
+            {gOpen && (
+              <InfoWindow position={gia} onCloseClick={() => gSetOpen(false)}>
                 <p>Gia Vin & Grill</p>
                 <p>1025 Rue Lenoir,</p>
                 <p>Montréal, QC H4C 2Z6</p>
              </InfoWindow>
             )}
-             <AdvancedMarker position={liverpool} onClick={() => setOpen(true)}>
+             <AdvancedMarker position={liverpool} onClick={() => liSetOpen(true)}>
               <Pin />
             </AdvancedMarker>
 
-            {open && (
-              <InfoWindow position={liverpool} onCloseClick={() => setOpen(false)}>
+            {liOpen && (
+              <InfoWindow position={liverpool} onCloseClick={() => liSetOpen(false)}>
                 <p>Liverpool House</p>
                 <p>2501 R. Notre Dame O,</p>
                 <p>Montréal, QC H3J 1N6</p>
              </InfoWindow>
             )}
-             <AdvancedMarker position={vinPapillon} onClick={() => setOpen(true)}>
+             <AdvancedMarker position={vinPapillon} onClick={() => vpSetOpen(true)}>
               <Pin />
             </AdvancedMarker>
 
-            {open && (
-              <InfoWindow position={vinPapillon} onCloseClick={() => setOpen(false)}>
+            {vpOpen && (
+              <InfoWindow position={vinPapillon} onCloseClick={() => vpSetOpen(false)}>
                 <p>Le Vin Papillon</p>
                 <p>2519 R. Notre Dame O,</p>
                 <p>Montréal, QC H3J 1N4</p>
              </InfoWindow>
             )}
-             <AdvancedMarker position={joeBeef} onClick={() => setOpen(true)}>
+             <AdvancedMarker position={joeBeef} onClick={() => jbSetOpen(true)}>
               <Pin />
             </AdvancedMarker>
 
-            {open && (
-              <InfoWindow position={joeBeef} onCloseClick={() => setOpen(false)}>
+            {jbOpen && (
+              <InfoWindow position={joeBeef} onCloseClick={() => jbSetOpen(false)}>
                 <p>Joe Beef</p>
                 <p>2491 R. Notre Dame O,</p>
                 <p> Montréal, QC H3J 1N6</p>
