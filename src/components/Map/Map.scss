@@ -1,0 +1,15 @@
+@use '../../styles/partials/globals';
+@use '../../styles/partials/variables' as *;
+@use '../../styles/partials/mixins' as *;
+
+.map {
+  height: 60vh;
+  width: 40rem;
+
+  &__container {
+    padding: 1rem 2rem;
+    display: flex;
+    justify-content: end;
+    width: 100%;
+  }
+}
