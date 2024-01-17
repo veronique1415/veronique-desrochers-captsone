@@ -18,6 +18,7 @@ const MapComp = () => {
   const vinoRama = { lat: 45.53065872192383, lng: -73.60821533203125};
   const mastard = { lat: 45.547176361083984, lng: -73.60295104980469};
   const gia = { lat: 45.477298736572266, lng: -73.59324645996094};
+  const liverpool = { lat: 45.48296356201172, lng: -73.57537841796875};
 
   //state for information window
   const [open, setOpen] = useState(false);
@@ -80,6 +81,17 @@ const MapComp = () => {
                 <p>Gia Vin & Grill</p>
                 <p>1025 Rue Lenoir,</p>
                 <p>Montréal, QC H4C 2Z6</p>
+             </InfoWindow>
+            )}
+             <AdvancedMarker position={liverpool} onClick={() => setOpen(true)}>
+              <Pin />
+            </AdvancedMarker>
+
+            {open && (
+              <InfoWindow position={liverpool} onCloseClick={() => setOpen(false)}>
+                <p>Liverpool House</p>
+                <p>2501 R. Notre Dame O,</p>
+                <p>Montréal, QC H3J 1N6</p>
              </InfoWindow>
             )}
           </Map>
