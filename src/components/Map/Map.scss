@@ -3,14 +3,24 @@
 @use '../../styles/partials/mixins' as *;
 
 .map {
-  height: 90vh;
-  width: 40rem;
+  width: 16rem;
+  height: 70svh;
+
+  @include tablet {
+    height: 50vh;
+    width: 40rem;
+  }
 
   &__container {
     padding: 1rem 2rem;
     display: flex;
-    justify-content: end;
+    align-items: center;
+    flex-direction: column;
     width: 100%;
+
+    @include tablet {
+      flex-direction: row;
+    }
   }
 
   &__list {
@@ -19,6 +29,14 @@
     list-style-type: none;
     text-align: start;
     padding-bottom: 1rem;
+
+    &-box {
+      max-width: 40rem;
+
+      @include tablet {
+        min-width: 20rem;
+      }
+    }
   }
 
   &__items {
