@@ -111,15 +111,15 @@ In terms of what pages this website will showcase :
 
 I have make a mockup of my Home and About sections.
 
-![](./Mockups/Home.png)
-![](./Mockups/About.png)
-![](./Mockups/findUs.png)
-![](./Mockups/Producers.png)
-![](./Mockups/ProducerDetail.png)
-![](./Mockups/Wines.png)
-![](./Mockups/WineDetails.png)
-![](./Mockups/Listing.png)
-![](./Mockups/backend.png)
+![](./src/assets/Mockups/Home.png)
+![](./src/assets/Mockups/About.png)
+![](./src/assets/Mockups/findUs.png)
+![](./src/assets/Mockups/Producers.png)
+![](./src/assets/Mockups/ProducerDetail.png)
+![](./src/assets/Mockups/Wines.png)
+![](./src/assets/Mockups/WineDetails.png)
+![](./src/assets/Mockups/Listing.png)
+![](./src/assets/Mockups/backend.png)
 
 About (About.png)
 
