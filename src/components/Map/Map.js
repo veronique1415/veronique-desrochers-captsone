@@ -1,6 +1,7 @@
 "use client";
 
 import { useState } from "react";
+import { Container, Row, Col } from "react-bootstrap";
 import {
   APIProvider,
   Map,
@@ -44,6 +45,28 @@ const MapComp = () => {
 
   return (
     <article className="map__container">
+        <Container className="mw-40">
+          <Row>
+            <Col>
+              <ul className="map__list"> Mile-end & Little Italy
+                <li className="map__items map__items--1">Mon Lapin</li>
+                <li className="map__items">Salle Climatisée</li>
+                <li className="map__items">Vino Rama</li>
+                <li className="map__items">La Cave de Mamie</li>
+                <li className="map__items">Mastard</li>
+                <li className="map__items">La Marelle</li>
+                </ul>
+                <ul className="map__list"> Little Burgundy & Saint-Henri
+                <li className="map__items map__items--1">Joe Beef</li>
+                <li className="map__items">Liverpool House</li>
+                <li className="map__items">Le Vin Papillon</li>
+                <li className="map__items">Nora noraGray</li>
+                <li className="map__items">Elena</li>
+                <li className="map__items">Gia</li>
+                </ul>
+            </Col>
+          </Row>
+        </Container>
       <APIProvider apiKey={process.env.REACT_APP_GOOGLE_MAPS_KEY}>
         <div className="map">
           <Map zoom={13} center={position} mapId={process.env.REACT_APP_GOOGLE_MAPS_STYLE}>

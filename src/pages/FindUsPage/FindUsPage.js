@@ -1,4 +1,5 @@
 import MapComp from "../../components/Map/Map";
+import Banner from "../../components/Banner/Banner"
 import "./FindUsPage.scss"
 
 const FindUsPage = () => {
@@ -8,7 +9,7 @@ const FindUsPage = () => {
 
     return (
         <main>
-            <div>Find us</div>
+            <Banner text={"Find our products in these restaurants"}/>
             <MapComp />
         </main>   
     )
