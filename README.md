@@ -7,7 +7,7 @@
 
 What is your app? Brief description in a couple of sentences.
 
-I'm planning on building a web app that will showcase one of my good friend and mentor's brand. My goal would be to have him be able to add products himself on the back end to keep his website up to date and help him grow his business by having a really well detailed list of his products, the producers he's working with and keep his customers engaged when learning about their mission. Ultimately, I would like to mimic the shopify and Wix of this world.I think it would be a great way to demonstrate what I've learn and I would most likely create a template that makes it reusable for futur interested clients.
+My app will be a brand website to help a local wine importer to shine. Hopefully having his own website that showcases the products that he imports and the producers he works with. I want to include a find Us page that gives the user a list of restaurant were the importer's products are available. Hopefully my app will help him make more sale and in the futur I would like to create an inventory app for importers too! (This is for another time)
 
 </details>
 
@@ -42,7 +42,7 @@ second one: In this scenario, the users would use this website to read about my 
 
 List the functionality that your app will include. These can be written as user stories or descriptions with related details. Do not describe _how_ these features are implemented, only _what_ needs to be implemented.
 
--One of my goal is for his new products to be displayed in the "new arrival" section when newly uploaded.
+-I would like to display about 10 new bottles on the home page, using a filter function to only keep the 10 first or the 10 last bottle of the array of bottles.
 
 -The user will be able to read about wine producers carried by the importers.
 
@@ -70,7 +70,7 @@ I will be using:
 -Axios
 -MySQL
 -Sass (obvi)
--express probably
+-express
 
 </details>
 <details>
@@ -81,7 +81,7 @@ List any external sources of data that will be used in your app.
 
 I would like to use google Maps embeded map to show users where they can find the importer's bottle of wine in Montreal. Each marker will show a restaurant or store's name and address.
 
-I might be using another API or have use of my own back end data storage
+I will use my own API that hopefully is connected to my own database.
 
 </details>
 <details>
@@ -102,8 +102,6 @@ In terms of what pages this website will showcase :
 
 - A listing section that will show a uploaded PDF with up to date stock that restaurant or an individual that would like to order for their own cellar.
 
--Hopefully a working Upload page for the administrator that stores date in the backend (and update the UI)
-
 </details>
 <details>
 <summary>Mockups</summary>
@@ -119,7 +117,6 @@ I have make a mockup of my Home and About sections.
 ![](./src/assets/Mockups/Wines.png)
 ![](./src/assets/Mockups/WineDetails.png)
 ![](./src/assets/Mockups/Listing.png)
-![](./src/assets/Mockups/backend.png)
 
 About (About.png)
 
@@ -130,14 +127,35 @@ About (About.png)
 
 Describe your data and the relationships between them. You can show this visually using diagrams, or write it out.
 
-I want to store data in the backend that then sorts the products by their type (color, region, producer) when searched for.
+I want to store my data in a database. This is what I really wanna play with for this Capstone, I wanna get comfortable with it.
+I'd have two database
+
+1. Producers {
+   producer_id
+   producer_name
+   producer_region
+   producer_village
+   producer_description
+   producer_image
+   wine_id (foreign key)
+   }
+
+2. Wines {
+   wine_id
+   wine_name
+   wine_region
+   wine_appellation
+   wine_description
+   wine_image
+   wine_varietal
+   }
 
 </details>
 <details>
 <summary>Endpoints</summary>
 ### Endpoints
 
-"use client";
+<!-- "use client";
 
 import { useState } from "react";
 import {
@@ -152,7 +170,7 @@ import "./Map.scss"
 const MapComp = () => {
 const position = { lat: 45.508888, lng: -73.561668 };
 const vinMonLapin = { lat: 45.53300094604492, lng: -73.61061096191406};
-const [open, setOpen] = useState(false);
+const [open, setOpen] = useState(false); -->
 
   <!-- return (
     <article className="map__container">
@@ -175,18 +193,84 @@ const [open, setOpen] = useState(false);
   );
 } -->
 
-export default MapComp;
+This is how I fetch GoogleMaps into my app. It takes a API key and a map style number. I already tested it and it works.
 
-This is an example of available documentation to help you display different markers of multiple locations on a Google maps. We can initially center the map where we want and then add multiple markers.
+**GET /producers/**
+
+Get a list of all producers to display on the ProducerPage
+Response:
+
+```
+[
+    {
+        "id": 1,
+        "name": "Pierre Bourlier",
+    },
+    {
+        "id": 2,
+        "name": "Christian Venier",
+    },
+    ...
+]
+```
+
+**GET /producers/:id**
+
+## To use when we clicked on a specific producer. It renders on the /producers/:id url
+
+Response:
+
+```
+{
+    "id": 1,
+    "name": "Christian Venier",
+    "country": "France",
+    "region": "Ardèche",
+    "description": "In 2015 Pierre set up his modest domaine, deep in the northern hills of Ardèche...",
+    "bottle_id": "5", "7"
+}
+```
+
+**GET /wines**
+
+- Render every available bottle of wine on the /wines page
+
+Response:
+
+```
+{
+    "id": 1,
+    "name": "Vaille que Vaille",
+},
+{
+    "id": 2,
+    "name": "Ca de Noci",
+}
+```
+
+**GET /wines/:id**
+
+- Gives specific informations on the given wine on its own page /wines/:Wineid
+
+Response:
+
+```
+{
+    "id": 1,
+    "name": "Vaille que Vaille",
+    "description": "this wine is bright",
+    "grapes": "pinot noir",
+    "region": "France",
+    "appellation: ""
+}
+```
 
 </details>
 <details>
 <summary>Auth</summary>
-### Auth
+<!-- ### Auth
 
-Does your project include any login or user profile functionality? If so, describe how authentication/authorization will be implemented.
-
-In the long run I would like to have user be able to log in in their account to see their orders and previous orders, but for the time being I don't think I'll have enough time to implement everything. We didn't have any lecture about admin user's side to upload their own products but I think I will need some kind of authentification on this end to let them access the backend.
+<!-- Does your project include any login or user profile functionality? If so, describe how authentication/authorization will be implemented.  -->
 
 </details>
 <details>
@@ -205,6 +289,8 @@ Scope your project as a sprint. Break down the tasks that will need to be comple
 <details>
 <summary>Nice-to-haves</summary>
 ## Nice-to-haves
+
+I wanna add authentification to add an upload page for the admin.
 
 In the future I would like to implement an ordering function directly from the website. Ordering wine in Quebec, beside directly from our liquor monopole is really complicated and I would like to make my friend's life easier by having his users be able to order directly from the website and pay. He would then receive a order confirmation and only have to arrange the shipping from SAQ then. Obviously from their end, the user would also receive a order confirmation from the email they provided.
 
