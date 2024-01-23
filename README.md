@@ -150,7 +150,7 @@ I'd have 1 database, 2 tables. My only concern is how to store images, espcially
    wine_varietal
    }
 
-![](./src/assets/Mockups/grand-ordinaire-database.png)
+![](./src/assets/Mockups/drawSQL-grand-ordinaire.png)
 
 </details>
 <details>
