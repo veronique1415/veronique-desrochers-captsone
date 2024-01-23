@@ -128,7 +128,7 @@ About (About.png)
 Describe your data and the relationships between them. You can show this visually using diagrams, or write it out.
 
 I want to store my data in a database. This is what I really wanna play with for this Capstone, I wanna get comfortable with it.
-I'd have two database
+I'd have 1 database, 2 tables. My only concern is how to store images, espcially if I want to store uploaded picture in the futur. I wanna say it should be in my public folder but I'm not sure yet.
 
 1. Producers {
    producer_id
