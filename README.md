@@ -150,6 +150,8 @@ I'd have two database
    wine_varietal
    }
 
+![](./src/assets/Mockups/grand-ordinaire-database.png)
+
 </details>
 <details>
 <summary>Endpoints</summary>
