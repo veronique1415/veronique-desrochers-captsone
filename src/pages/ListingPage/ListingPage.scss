@@ -4,5 +4,33 @@
 
 .pdf {
   width: 90%;
-  height: 400px;
+  height: 100%;
+
+  &__section {
+    margin: 1rem 0;
+  }
+
+  &__container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100svh;
+  }
+
+  &__button {
+    width: 200px;
+    background-color: $Secondary-beige;
+
+    &:hover {
+      background-color: $Dark-beige;
+    }
+
+    &--container {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 5svh;
+      margin: 1rem 0;
+    }
+  }
 }
