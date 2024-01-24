@@ -1,0 +1,9 @@
+@use '../../styles/partials/globals';
+@use '../../styles/partials/variables' as *;
+@use '../../styles/partials/mixins' as *;
+
+.paragraph__container {
+  border-radius: 10px;
+  @include border-all;
+  @include font-body;
+}

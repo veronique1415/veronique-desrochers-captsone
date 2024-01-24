@@ -1,0 +1,10 @@
+@use '../../styles/partials/globals';
+@use '../../styles/partials/variables' as *;
+@use '../../styles/partials/mixins' as *;
+
+.banner__heading {
+  text-align: center;
+  @include font-section;
+  @include border-top-bottom;
+  padding: 1rem;
+}
