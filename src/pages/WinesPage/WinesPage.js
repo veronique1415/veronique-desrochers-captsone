@@ -1,10 +1,10 @@
 import Bourlier from "../../assets/images/Bourlier.jpg"
-import Producers from "../../components/Producers/Producers";
+import Products from "../../components/Products/Products";
 
 const WinesPage = () => {
      return (
         <main>
-            <Producers text={"Our Products"} imagePath={Bourlier} title={"Vaille que Vaille"} url={"/wines/details"}/>
+            <Products text={"Our Products"} imagePath={Bourlier} title={"Vaille que Vaille"} url={"/wines/details"}/>
         </main>
         
     )

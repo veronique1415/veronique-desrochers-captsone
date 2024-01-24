@@ -17,18 +17,18 @@ const ProducerDetails = ({text, imagePath, urlLink, morePath}) => {
         <Container fluid className="pb-4">
                 <Row xs={2} sm={3} md={4} lg={5} className="image__flex-container">
                     <Col className="py-1">
-                        <Link to={urlLink}><Card>
+                        <Link to={urlLink}><Card className="product__card">
                             <Card.Img src={morePath}/>
-                            <Card.ImgOverlay className="card__overview">
+                            <Card.ImgOverlay className="product__card--overview">
                                 <h3>Ca de Noci</h3>
                                 <p>Amazing product</p>
                             </Card.ImgOverlay>
                         </Card></Link>
                     </Col>
                     <Col className="py-1">
-                        <Link to={urlLink}><Card>
+                        <Link to={urlLink}><Card className="product__card">
                             <Card.Img src={morePath}/>
-                            <Card.ImgOverlay className="card__overview">
+                            <Card.ImgOverlay className="product__card--overview">
                                 <h3>Ca de Noci</h3>
                                 <p>Amazing product</p>
                             </Card.ImgOverlay>

@@ -36,7 +36,7 @@ const NewIn = () => {
 
   return <section className="newIn">
             <Banner text={"New arrivals"} />
-            <Container fluid className="py-2 pb-2">
+            <Container fluid className="pb-4">
                 <Row xs={2} sm={3} md={4} lg={6} className="product__card--row">
                     {bottles.map((bottle) => (
                             <Col className="py-1 product__card--col">
