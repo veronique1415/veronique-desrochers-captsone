@@ -1,9 +1,0 @@
-@use '../../styles/partials/globals';
-@use '../../styles/partials/variables' as *;
-@use '../../styles/partials/mixins' as *;
-
-.about-card {
-  &__container {
-    text-align: center;
-  }
-}
