@@ -197,74 +197,34 @@ const [open, setOpen] = useState(false); -->
 
 This is how I fetch GoogleMaps into my app. It takes a API key and a map style number. I already tested it and it works.
 
-**GET /producers/**
+**GET /producers**
 
 Get a list of all producers to display on the ProducerPage
 Response:
 
-```
-[
-    {
-        "id": 1,
-        "name": "Pierre Bourlier",
-    },
-    {
-        "id": 2,
-        "name": "Christian Venier",
-    },
-    ...
-]
-```
+![](./src/assets/Mockups/producers-data-database.png)
 
-**GET /producers/:id**
-
-## To use when we clicked on a specific producer. It renders on the /producers/:id url
+**GET /producers/:producerId**
 
 Response:
+![](./src/assets/Mockups/singleProducer.png)
 
-```
-{
-    "id": 1,
-    "name": "Christian Venier",
-    "country": "France",
-    "region": "Ardèche",
-    "description": "In 2015 Pierre set up his modest domaine, deep in the northern hills of Ardèche...",
-    "bottle_id": "5", "7"
-}
-```
-
-**GET /wines**
+**GET /products**
 
 - Render every available bottle of wine on the /wines page
 
 Response:
+![](./src/assets/Mockups/producers-data-database.png)
 
-```
-{
-    "id": 1,
-    "name": "Vaille que Vaille",
-},
-{
-    "id": 2,
-    "name": "Ca de Noci",
-}
-```
-
-**GET /wines/:id**
-
-- Gives specific informations on the given wine on its own page /wines/:Wineid
+**GET /products/:productId**
 
 Response:
 
 ```
-{
-    "id": 1,
-    "name": "Vaille que Vaille",
-    "description": "this wine is bright",
-    "grapes": "pinot noir",
-    "region": "France",
-    "appellation: ""
-}
+
+![](./src/assets/Mockups/singleproduct.png)
+
+
 ```
 
 </details>
@@ -300,3 +260,4 @@ I say in the futur because I wanna try to be realistic with what I think I can p
 
 </details>
 </details>
+```
