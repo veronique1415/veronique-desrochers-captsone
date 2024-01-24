@@ -17,7 +17,9 @@ const NewIn = () => {
     const getBottles = async () => {
         try {
             const response = await axios.get(bottleUrl)
-            setBottles(response.data)
+            const dataBottles = response.data
+            const filteredBottles = dataBottles.slice(0, 6)
+            setBottles(filteredBottles)
         } catch (error) {
             console.log("Unable to retrieve picture", error)
         }
@@ -31,19 +33,18 @@ const NewIn = () => {
     }
     console.log("bottle",bottles)
 
-    const {product_image, product_name, product_id} = bottles[0]
 
   return <section className="newIn">
             <Banner text={"New arrivals"} />
             <Container fluid className="py-2 pb-2">
-                <Row xs={2} sm={3} md={4} lg={5} className="image__flex-container">
+                <Row xs={2} sm={3} md={4} lg={6} className="product__card--row">
                     {bottles.map((bottle) => (
-                            <Col className="py-1">
-                        <Link to={`/wines/${product_id}`}>
-                            <Card key={product_id}>
-                        <Card.Img src={product_image}/>
-                            <Card.ImgOverlay className="card__overview">
-                                <h3>{product_name}</h3>
+                            <Col className="py-1 product__card--col">
+                        <Link to={`/wines/${bottle.product_id}`}>
+                            <Card key={bottle.product_id} className="product__card">
+                        <Card.Img src={bottle.product_image}/>
+                            <Card.ImgOverlay className="product__card--overview">
+                                <h3>{bottle.product_name}</h3>
                             </Card.ImgOverlay>
                         </Card></Link>
                         </Col>

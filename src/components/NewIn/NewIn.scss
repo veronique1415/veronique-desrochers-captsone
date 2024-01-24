@@ -2,10 +2,10 @@
 @use '../../styles/partials/variables' as *;
 @use '../../styles/partials/mixins' as *;
 
-.card {
+.product__card {
   overflow: hidden;
 
-  &__overview {
+  &--overview {
     @include backgroundGradient;
     opacity: 0.8;
     transform: translateY(101%);
@@ -14,6 +14,6 @@
   }
 }
 
-.card:hover .card__overview {
+.product__card:hover .product__card--overview {
   transform: translateY(0);
 }
