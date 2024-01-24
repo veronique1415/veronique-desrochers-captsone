@@ -7,7 +7,13 @@
   height: 100%;
 
   &__section {
-    margin: 3rem 0;
+    margin: 1rem 0;
+    @include tablet {
+      margin: 2rem 0;
+    }
+    @include desktop {
+      margin: 3rem 0;
+    }
   }
 
   &__container {
@@ -19,9 +25,12 @@
 
   &__button {
     @include font-body;
-    height: 2.375rem;
+    height: 1.9rem;
     width: 12.5rem;
     background-color: $Secondary-beige;
+    @include tablet {
+      height: 2.375rem;
+    }
 
     &:hover {
       background-color: $Dark-beige;
