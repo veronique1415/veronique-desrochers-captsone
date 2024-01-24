@@ -220,13 +220,9 @@ Response:
 
 Response:
 
-```
-
 ![](./src/assets/Mockups/singleproduct.png)
 
-
 ```
-
 </details>
 <details>
 <summary>Auth</summary>
