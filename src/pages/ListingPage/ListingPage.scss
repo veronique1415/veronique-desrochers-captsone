@@ -7,7 +7,7 @@
   height: 100%;
 
   &__section {
-    margin: 1rem 0;
+    margin: 3rem 0;
   }
 
   &__container {
@@ -18,7 +18,9 @@
   }
 
   &__button {
-    width: 200px;
+    @include font-body;
+    height: 2.375rem;
+    width: 12.5rem;
     background-color: $Secondary-beige;
 
     &:hover {
