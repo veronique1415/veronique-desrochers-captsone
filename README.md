@@ -98,8 +98,6 @@ In terms of what pages this website will showcase :
 
 - Products section ordered by wine type (color probably) with a description from each bottle.
 
--I'll add a search bar that let you search your product by name or producer
-
 - A listing section that will show a uploaded PDF with up to date stock that restaurant or an individual that would like to order for their own cellar.
 
 </details>
@@ -222,7 +220,6 @@ Response:
 
 ![](./src/assets/Mockups/singleproduct.png)
 
-```
 </details>
 <details>
 <summary>Auth</summary>
@@ -247,6 +244,7 @@ Scope your project as a sprint. Break down the tasks that will need to be comple
 <details>
 <summary>Nice-to-haves</summary>
 ## Nice-to-haves
+I would like to add a search bar that let you search your product by name or producer
 
 I wanna add authentification to add an upload page for the admin.
 
