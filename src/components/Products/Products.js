@@ -31,9 +31,9 @@ const Products = ({text, imagePath, title, url}) => {
     <section className="producers">
         <Banner text={text}/>
         <Container>
-            <Row md={3} lg={6}>
+            <Row>
             {bottles.map((bottle) => (
-                           <Col className="producers__containers">
+                           <Col>
                            <Link to={`/wines/${bottle.product_id}`} className="producers__link">
                                    <Card key={bottle.product_id}>
                                    <Card.Img src={bottle.product_image} alt={bottle.product_name}/>
