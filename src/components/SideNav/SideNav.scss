@@ -27,7 +27,7 @@
     &--menu {
       font-weight: 600;
       @include font-section;
-      padding-left: 1.3rem;
+      padding-left: 2.3rem;
       padding-top: 0.5rem;
       padding-bottom: 0.4rem;
     }
@@ -54,6 +54,7 @@
   }
 
   &__link {
+    padding-left: 1rem;
     text-decoration: none;
     color: black;
   }

@@ -33,8 +33,8 @@ const SideNav = () => {
             <li className='sidenav__item'><Link to={"findUs"} className='sidenav__link'>Find Us</Link></li>
         </ul>
         <div className='sidenav__logo--container'>
-        
-        </div>    <Link to={"https://www.instagram.com/grand.ordinaire/"} className="sidenav__link sidenav__logo"><FontAwesomeIcon icon={faInstagram} className='fa-2xl'/></Link>
+          <Link to={"https://www.instagram.com/grand.ordinaire/"} className="sidenav__link sidenav__logo"><FontAwesomeIcon icon={faInstagram} className='fa-2xl'/></Link>
+        </div>  
         </Offcanvas.Body>  
       </Offcanvas>  
       </Container>  

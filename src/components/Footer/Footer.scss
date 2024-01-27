@@ -6,16 +6,24 @@
   @include border-top-bottom;
 
   &__containers {
-    @include border-right;
+    @include border-left;
     display: flex;
     align-items: center;
     justify-content: center;
   }
   &__list {
-    padding: 1rem 1rem;
+    display: flex;
+    flex-direction: column;
+    padding-left: 0.2rem;
+    font-size: 8px;
     list-style-type: none;
     text-transform: uppercase;
-    @include font-mini-body;
+    line-height: 0.5rem;
+
+    @include tablet {
+      @include font-body;
+      padding: 1rem 1rem;
+    }
   }
 
   &__item {
@@ -37,15 +45,34 @@
   }
 
   &__contact-us {
-    font-weight: 600;
+    display: none;
+    @include tablet {
+      display: inline;
+      font-weight: 600;
+    }
   }
 }
 
 .first {
   border-left: none;
-  padding-right: 2rem;
+  padding-right: 1rem;
+  padding-top: 0.5rem;
 
   @include tablet {
     padding-right: 0;
+  }
+}
+
+.mobile {
+  @include tablet {
+    display: none;
+  }
+}
+
+.tablet {
+  display: none;
+
+  @include tablet {
+    display: inline;
   }
 }
