@@ -12,9 +12,14 @@
     justify-content: center;
   }
   &__list {
+    padding: 1rem 1rem;
     list-style-type: none;
     text-transform: uppercase;
-    @include font-body;
+    @include font-mini-body;
+  }
+
+  &__item {
+    padding-bottom: 0.5rem;
   }
 
   &__link {
@@ -29,6 +34,10 @@
   &__email {
     border: none;
     background-color: $Primary-beige;
+  }
+
+  &__contact-us {
+    font-weight: 600;
   }
 }
 
