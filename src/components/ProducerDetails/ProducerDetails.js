@@ -1,10 +1,9 @@
 import Banner from "../Banner/Banner";
-import HeroProd from "../HeroProd/HeroProd";
 import LongText from "../LongText/LongText";
 import { useState, useEffect } from "react";
 import axios from "axios";
 import { Link, useParams } from "react-router-dom";
-import { Container, Row, Col, Card } from "react-bootstrap";
+import { Container, Row, Col, Card, Image } from "react-bootstrap";
 import "./ProducerDetails.scss"
 
 const ProducerDetails = ({text, imagePath, urlLink, morePath}) => {
@@ -42,7 +41,7 @@ const ProducerDetails = ({text, imagePath, urlLink, morePath}) => {
         <Container>
             <Row xs={1} lg={2} >
                 <Col>
-                    <HeroProd imagePath={producer}/>
+                <Image src={producer.producer_image}  className="hero__image"/>
                 </Col>
                 <Col>
                     <LongText 

@@ -3,6 +3,7 @@ import NewIn from "../../components/NewIn/NewIn";
 import SaillardHero from "../../assets/images/saillardHero.png"
 import pouringWine from "../../assets/images/winePouring.jpeg"
 import swirlingWine from "../../assets/images/wineSwirling.jpeg"
+
 const HomePage = () => {
 
 

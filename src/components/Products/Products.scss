@@ -1,0 +1,21 @@
+@use '../../styles/partials/globals';
+@use '../../styles/partials/variables' as *;
+@use '../../styles/partials/mixins' as *;
+
+.products {
+  &__link {
+    text-align: center;
+    text-decoration: none;
+    color: black;
+  }
+
+  &__name {
+    margin-top: 4px;
+    font-size: 1rem;
+
+    @include tablet {
+      margin-top: 8px;
+      @include font-body;
+    }
+  }
+}

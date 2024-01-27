@@ -24,7 +24,7 @@
   }
 
   &__menu {
-    @include border-right;
+    @include border-left;
     display: flex;
     align-items: center;
     justify-content: center;

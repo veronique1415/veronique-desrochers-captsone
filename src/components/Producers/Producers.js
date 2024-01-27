@@ -30,7 +30,7 @@ const Producers = ({text, imagePath, title, url}) => {
   return (
     <section className="producers">
         <Banner text={text}/>
-        <Container>
+        <Container className="py-4">
             <Row>
             {producers.map((producer) => (
                            <Col className="producers__containers">

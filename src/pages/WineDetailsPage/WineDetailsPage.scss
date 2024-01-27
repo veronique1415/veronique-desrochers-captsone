@@ -1,0 +1,27 @@
+@use '../../styles/partials/globals';
+@use '../../styles/partials/variables' as *;
+@use '../../styles/partials/mixins' as *;
+
+.wine {
+  &__image {
+    width: 100%;
+  }
+
+  &__list {
+    @include font-subheader;
+    padding: 0;
+    list-style-type: none;
+  }
+
+  &__item {
+    padding-bottom: 1rem;
+
+    @include tablet {
+      padding-bottom: 2rem;
+    }
+
+    &--span {
+      font-weight: 600;
+    }
+  }
+}

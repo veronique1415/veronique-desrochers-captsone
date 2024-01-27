@@ -4,7 +4,7 @@ import ProducerDetails from "../../components/ProducerDetails/ProducerDetails";
 const ProducerDetailsPage = () => {
     return (
         <main>
-            <ProducerDetails />
+            <ProducerDetails/>
         </main>
     )
 }

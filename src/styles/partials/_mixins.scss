@@ -27,12 +27,12 @@
 
 @mixin font-section {
   font-size: clamp(1rem, 0.7rem + 1.5vw, 2.5rem);
-  line-height: 1.125rem;
+  line-height: 1.75rem;
 }
 
 @mixin font-subheader {
   font-size: clamp(1rem, 0.8rem + 1vw, 2rem);
-  line-height: 1.125rem;
+  line-height: 1.75rem;
 }
 
 @mixin font-body {
@@ -62,7 +62,7 @@
 }
 
 @mixin border-right {
-  border-left: 2px solid black;
+  border-right: 2px solid black;
 }
 
 @mixin border-top {
