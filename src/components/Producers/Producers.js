@@ -31,7 +31,7 @@ const Producers = ({text, imagePath, title, url}) => {
     <section className="producers">
         <Banner text={text}/>
         <Container className="py-3 producers__container--flex" >
-            <Row>
+            <Row xs={1} md={3}>
             {producers.map((producer) => (
                            <Col className="producers__containers">
                            <Link to={`/producers/${producer.producer_id}`} className="producers__link">

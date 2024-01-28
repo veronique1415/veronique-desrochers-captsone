@@ -6,3 +6,9 @@ body {
   background-color: $Primary-beige;
   @include border-left-right;
 }
+
+main {
+  @include mobile {
+    min-height: 75svh;
+  }
+}
