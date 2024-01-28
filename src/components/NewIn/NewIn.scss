@@ -17,3 +17,63 @@
 .product__card:hover .product__card--overview {
   transform: translateY(0);
 }
+
+.carousel {
+  padding-left: 0.5rem;
+  list-style-type: none;
+  display: flex;
+  overflow-x: auto;
+  padding-bottom: calc(0.75 * var(--gutter));
+  margin-bottom: calc(-0.1 * var(--gutter));
+  scroll-snap-type: x proximity;
+}
+
+.list__item {
+  flex: 0 0 auto;
+  scroll-snap-align: center;
+  margin-right: calc(var(--gutter) / 2);
+  overflow: hidden;
+}
+
+.list__link {
+  display: block;
+  width: 100%;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.list__img {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+  object-fit: cover;
+  max-height: 150px; /* Set a maximum height for the images */
+}
+
+.mobile--new {
+  @include mobile {
+    display: none;
+  }
+}
+
+// .tablet--new {
+//   @include tablet {
+//     display: none;
+//   }
+// }
+
+.list__overview {
+  background-color: #fff;
+  padding: 2rem;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  max-height: 100%;
+  transform: translateY(101%);
+  transition: transform 0.3s ease-in;
+}
+
+.list__item:hover .list__overview {
+  transform: translateY(0);
+}

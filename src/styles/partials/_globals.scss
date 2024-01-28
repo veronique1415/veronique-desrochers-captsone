@@ -1,6 +1,12 @@
 @use './mixins' as *;
 @use './variables' as *;
 
+:root {
+  @include mobile {
+    --gutter: 1.25rem;
+  }
+}
+
 html {
   box-sizing: border-box;
 }

@@ -63,13 +63,13 @@
   }
 }
 
-.mobile {
+.mobile--footer {
   @include tablet {
     display: none;
   }
 }
 
-.tablet {
+.tablet--footer {
   display: none;
 
   @include tablet {

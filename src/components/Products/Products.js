@@ -6,7 +6,7 @@ import axios from "axios";
 import "./Products.scss"
 
 
-const Products = ({text, imagePath, title, url}) => {
+const Products = ({text}) => {
 
     const bottleUrl = "http://localhost:8080/products"
     const [bottles, setBottles] = useState([]);
@@ -33,16 +33,16 @@ const Products = ({text, imagePath, title, url}) => {
         <Banner text={text}/>
         <Container>
             <Row xs={2} md={4} lg={6}>
-            {bottles.map((bottle) => (
-                           <Col className="pb-3">
-                           <Link to={`/wines/${bottle.product_id}`} className="products__link">
-                                   <Card key={bottle.product_id}>
-                                   <Card.Img src={bottle.product_image} alt={bottle.product_name}/>
-                                   </Card>
-                                   <h3 className="products__name">{bottle.product_name}</h3>
-                               </Link>
-                           </Col>
-                        ))}
+                {bottles.map((bottle) => (
+                    <Col className="pb-3">
+                        <Link to={`/wines/${bottle.product_id}`} className="products__link">
+                            <Card key={bottle.product_id}>
+                            <Card.Img src={bottle.product_image} alt={bottle.product_name}/>
+                            </Card>
+                            <h3 className="products__name">{bottle.product_name}</h3>
+                        </Link>
+                    </Col>
+                 ))}
             </Row>
         </Container>
     </section>

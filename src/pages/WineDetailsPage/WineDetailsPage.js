@@ -79,7 +79,7 @@ const WineDetailsPage = () => {
                                 <Col className="py-1 product__card--col">
                                     <Link to={`/wines/${bottle.product_id}`}>
                                         <Card key={bottle.product_id} className="product__card">
-                                            <Card.Img src={bottle.product_image}/>
+                                            <Card.Img src={bottle.product_image} alt={bottle.product_name}/>
                                             <Card.ImgOverlay className="product__card--overview">
                                             <h3>{bottle.product_name}</h3>
                                             </Card.ImgOverlay>

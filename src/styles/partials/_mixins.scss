@@ -2,7 +2,7 @@
 
 // media queries mixins
 @mixin mobile {
-  @media (min-width: 320px) {
+  @media (max-width: 767px) {
     @content;
   }
 }

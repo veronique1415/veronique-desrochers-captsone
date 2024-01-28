@@ -1,10 +1,5 @@
 import {Container, Row, Col, Card} from "react-bootstrap"
 import { Link } from "react-router-dom"
-// import Bottle1 from "../../assets/images/CadeNociO.jpg"
-// import Bottle2 from "../../assets/images/CadeNociO2.jpg"
-// import Bottle3 from "../../assets/images/VenierR.jpg"
-// import Bottle4 from "../../assets/images/VenierR3.jpg"
-// import Bottle5 from "../../assets/images/CadeNociR3.jpg"
 import Banner from "../Banner/Banner";
 import { useState, useEffect } from "react";
 import axios from "axios";
@@ -36,17 +31,31 @@ const NewIn = () => {
 
   return <section className="newIn">
             <Banner text={"New arrivals"} />
-            <Container fluid className="pb-4">
+            <ul class="carousel tablet--new">
+                {bottles.map((bottle) => (
+                <>  
+                <li className="list__item"><Link className="list__link product__card" to={`/wines/${bottle.product_id}`}>
+                    <img className="list__img" src={bottle.product_image} alt={bottle.product_name}></img>
+                    <div className="product__card--overview">
+                    <h3>{bottle.product_name}</h3>
+                    </div>
+                </Link>
+                </li>
+                </>  
+            ))}
+            </ul>
+            <Container fluid className="pb-4 mobile--new">
                 <Row xs={2} sm={3} md={4} lg={6} className="product__card--row">
                     {bottles.map((bottle) => (
-                            <Col className="py-1 product__card--col">
-                        <Link to={`/wines/${bottle.product_id}`}>
-                            <Card key={bottle.product_id} className="product__card">
-                        <Card.Img src={bottle.product_image}/>
-                            <Card.ImgOverlay className="product__card--overview">
-                                <h3>{bottle.product_name}</h3>
-                            </Card.ImgOverlay>
-                        </Card></Link>
+                        <Col className="py-1 product__card--col">
+                            <Link to={`/wines/${bottle.product_id}`}>
+                                <Card key={bottle.product_id} className="product__card">
+                                    <Card.Img src={bottle.product_image} alt={bottle.product_name}/>
+                                    <Card.ImgOverlay className="product__card--overview">
+                                        <h3>{bottle.product_name}</h3>
+                                    </Card.ImgOverlay>
+                                </Card>
+                            </Link>
                         </Col>
                         ))}
                 </Row>
