@@ -4,7 +4,7 @@
 
 .map {
   width: 16rem;
-  height: 100svh;
+  height: 80svh;
 
   @include tablet {
     width: 40rem;
@@ -40,12 +40,48 @@
   }
 
   &__items {
-    font-weight: 400;
+    font-weight: 600;
     @include font-body;
     padding: 0.2rem;
+
+    @include tablet {
+      font-weight: 400;
+    }
+
+    &:hover {
+      @include tablet {
+        text-decoration: underline;
+      }
+    }
 
     &--1 {
       padding-top: 1rem;
     }
+  }
+
+  &__address {
+    font-weight: 400;
+    padding-bottom: 0.5rem;
+    font-size: 12px;
+    text-decoration: none;
+    color: black;
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+}
+
+.tablet--map {
+  @include mobile {
+    display: none;
+  }
+  @include tablet {
+    display: flex;
+  }
+}
+
+.mobile--map {
+  @include tablet {
+    display: none;
   }
 }

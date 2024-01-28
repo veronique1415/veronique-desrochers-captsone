@@ -9,6 +9,7 @@ import {
   InfoWindow,
 } from "@vis.gl/react-google-maps";
 import "./Map.scss"
+import { Link } from "react-router-dom";
 
 const MapComp = () => {
   //position for map and restaurants locations
@@ -46,25 +47,49 @@ const MapComp = () => {
     <article className="map__container">
         <div className="map__list-box">
               <ul className="map__list"> Mile-end & Little Italy
-                <li className="map__items map__items--1">Mon Lapin</li>
-                <li className="map__items">Salle Climatisée</li>
-                <li className="map__items">Vino Rama</li>
-                <li className="map__items">La Cave de Mamie</li>
-                <li className="map__items">Mastard</li>
-                <li className="map__items">La Marelle</li>
+                <li className="map__items map__items--1" onClick={() => vlSetOpen(true)}>Mon Lapin
+                <p className="mobile--map"><a className="map__address" href="https://www.google.com/maps/place/Mon+Lapin/@45.533007,-73.6132232,17z/data=!3m1!4b1!4m6!3m5!1s0x4cc9196da59b9c11:0xb54ca374bd37d150!8m2!3d45.533007!4d-73.6106429!16s%2Fg%2F11f3th9s0j?entry=ttu">150 Rue Saint-Zotique East, Montréal, QC H2S 1K8</a></p>
+                </li>
+                <li className="map__items" onClick={() => slSetOpen(true)}>Salle Climatisée
+                <p className="mobile--map"><a className="map__address" href="https://www.google.com/maps/place/Salle+Climatis%C3%A9e/@45.5302517,-73.6114648,17z/data=!3m1!4b1!4m6!3m5!1s0x4cc919578561938f:0xc53e22a17a26cd5a!8m2!3d45.5302517!4d-73.6088845!16s%2Fg%2F11m_wrlzqq?entry=ttu">6448 Boul. Saint-Laurent, Montréal, QC H2S 3C4</a></p>
+                </li>
+                <li className="map__items" onClick={() => vinoSetOpen(true)}>Vino Rama
+                <p className="mobile--map"><a className="map__address" href="https://www.google.com/maps/place/Vino+Rama+Montr%C3%A9al/@45.5306657,-73.6082385,17z/data=!3m1!4b1!4m6!3m5!1s0x4cc91931088aed81:0x8fcabf53caa23d77!8m2!3d45.5306657!4d-73.6082385!16s%2Fg%2F11pzfnlx54?entry=ttu">29 Rue Beaubien E, Montréal, QC H2S 1P7</a></p>
+                </li>
+                <li className="map__items" onClick={() => cmSetOpen(true)}>La Cave de Mamie
+                <p className="mobile--map"><a className="map__address" href="https://www.google.com/maps/place/La+Cave+de+Mamie/@45.533051,-73.6082443,17z/data=!3m1!4b1!4m6!3m5!1s0x4cc9196af08e5137:0x37ce6ef241df63d0!8m2!3d45.5330473!4d-73.6056747!16s%2Fg%2F11tdmy5dd_?entry=ttu">322 Rue Beaubien E, Montréal, QC H2S 1R8</a></p>
+                </li>
+                <li className="map__items" onClick={() => masSetOpen(true)}>Mastard
+                <p className="mobile--map"><a className="map__address" href="https://www.google.com/maps/place/Restaurant+Mastard/@45.5471719,-73.605505,17z/data=!3m1!4b1!4m6!3m5!1s0x4cc91912464a42a5:0xfd59130687279f23!8m2!3d45.5471682!4d-73.6029354!16s%2Fg%2F11qp_f83q8?entry=ttu">1879 Rue Bélanger, Montréal, QC H2G 1B6</a></p>
+                </li>
+                <li className="map__items" onClick={() => marSetOpen(true)}>La Marelle
+                <p className="mobile--map"><a className="map__address" href="https://www.google.com/maps/place/La+Marelle/@45.5291119,-73.6135741,17z/data=!3m1!4b1!4m6!3m5!1s0x4cc919d81bf2c543:0x966e874f15a41d5e!8m2!3d45.5291082!4d-73.6110045!16s%2Fg%2F11lcs12gfv?entry=ttu">129 Rue Beaubien O, Montréal, QC H2V 1C3</a></p>
+                </li>
                 </ul>
                 <ul className="map__list"> Little Burgundy & Saint-Henri
-                <li className="map__items map__items--1">Joe Beef</li>
-                <li className="map__items">Liverpool House</li>
-                <li className="map__items">Le Vin Papillon</li>
-                <li className="map__items">Nora noraGray</li>
-                <li className="map__items">Elena</li>
-                <li className="map__items">Gia</li>
+                <li className="map__items map__items--1" onClick={() => jbSetOpen(true)}>Joe Beef
+                <p className="mobile--map"><a className="map__address" href="https://www.google.com/maps/place/Joe+Beef/@45.4830593,-73.5778474,17z/data=!3m1!4b1!4m6!3m5!1s0x4cc91a7a23de0961:0x4dda44b6c1dd33da!8m2!3d45.4830556!4d-73.5752778!16s%2Fm%2F0j9kdsm?entry=ttu">2491 R. Notre Dame O, Montréal, QC H3J 1N6</a></p>
+                </li>
+                <li className="map__items" onClick={() => liSetOpen(true)}>Liverpool House
+                <p className="mobile--map"><a className="map__address" href="https://www.google.com/maps/place/Liverpool+House/@45.4830588,-73.5855722,15z/data=!4m10!1m2!2m1!1sliverpool!3m6!1s0x4cc91a7a21a788fb:0x3a63f683ac77fae!8m2!3d45.4829994!4d-73.575425!15sCglsaXZlcnBvb2wiA4gBAVoLIglsaXZlcnBvb2ySARNjYW5hZGlhbl9yZXN0YXVyYW50mgEjQ2haRFNVaE5NRzluUzBWSlEwRm5TVVJLZDNKWWRFSjNFQUXgAQA!16s%2Fg%2F1tp26x5r?entry=ttu">2501 R. Notre Dame O, Montréal, QC H3J 1N6</a></p>
+                </li>
+                <li className="map__items" onClick={() => vpSetOpen(true)}>Le Vin Papillon
+                <p className="mobile--map"><a className="map__address" href="https://www.google.com/maps/place/Le+Vin+Papillon/@45.4827888,-73.5804421,17z/data=!3m1!4b1!4m6!3m5!1s0x4cc91a7a207c556d:0xa0e82d6c52920693!8m2!3d45.4827889!4d-73.5755712!16s%2Fg%2F1pp2v0bx5?entry=ttu">2519 R. Notre Dame O, Montréal, QC H3J 1N4</a></p>
+                </li>
+                <li className="map__items" onClick={() => noSetOpen(true)}>Nora noraGray
+                <p className="mobile--map"><a className="map__address" href="https://www.google.com/maps/place/Nora+Gray/@45.4931762,-73.5711147,17z/data=!3m1!4b1!4m6!3m5!1s0x4cc91a665a231fa1:0xe2e7b9bb0b03791a!8m2!3d45.4931762!4d-73.5685398!16s%2Fg%2F1hc75pmfq?entry=ttu">1391 Rue Saint-Jacques, Montréal, QC H3C 1H2</a></p>
+                </li>
+                <li className="map__items" onClick={() => elSetOpen(true)}>Elena
+                <p className="mobile--map"><a className="map__address" href="https://www.google.com/maps/place/Elena/@45.4698292,-73.594287,17z/data=!3m1!4b1!4m6!3m5!1s0x4cc911e0fbb9b3a1:0x280b13d5103b90e!8m2!3d45.4698292!4d-73.5917121!16s%2Fg%2F11hb008v98?entry=ttu">5090 R. Notre Dame O, Montréal, QC H4C 1T1</a></p>
+                </li>
+                <li className="map__items"onClick={() => gSetOpen(true)}>Gia Vin & Grill
+                <p className="mobile--map"><a className="map__address" href="https://www.google.com/maps/place/Gia+Vin+%26+Grill/@45.4772603,-73.5981313,17z/data=!3m1!4b1!4m6!3m5!1s0x4cc911a3903022cf:0x236049879baa63db!8m2!3d45.4772604!4d-73.5932604!16s%2Fg%2F11rjrz88ks?entry=ttu">1025 Rue Lenoir, Montréal, QC H4C 2Z6</a></p>
+                </li>
                 </ul>
         </div>
       <APIProvider apiKey={process.env.REACT_APP_GOOGLE_MAPS_KEY}>
-        <div className="map">
-          <Map zoom={13} center={position} mapId={process.env.REACT_APP_GOOGLE_MAPS_STYLE}>
+        <div className="map tablet--map">
+          <Map zoom={14} center={position} mapId={process.env.REACT_APP_GOOGLE_MAPS_STYLE}>
             <AdvancedMarker position={vinMonLapin} onClick={() => vlSetOpen(true)}>
               <Pin />
             </AdvancedMarker>
