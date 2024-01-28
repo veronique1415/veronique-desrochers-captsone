@@ -6,7 +6,7 @@ import { useState, useEffect } from "react";
 import axios from "axios";
 import "./Producers.scss"
 
-const Producers = ({text, imagePath, title, url}) => {
+const Producers = ({text}) => {
 
     const producersUrl = "http://localhost:8080/producers"
     const [producers, setProducers] = useState([]);
@@ -31,14 +31,14 @@ const Producers = ({text, imagePath, title, url}) => {
     <section className="producers">
         <Banner text={text}/>
         <Container className="py-3 producers__container--flex" >
-            <Row xs={1} md={3}>
+            <Row xs={1} md={3} className="producers__row">
             {producers.map((producer) => (
                            <Col className="producers__containers">
                            <Link to={`/producers/${producer.producer_id}`} className="producers__link">
                                    <Card key={producer.producer_id}>
                                    <Card.Img src={producer.producer_image} alt={producer.producer_name}/>
                                    </Card>
-                                   <h3>{producer.producer_name}</h3>
+                                   <h3 className="producers__name">{producer.producer_name}</h3>
                                </Link>
                            </Col>
                         ))}

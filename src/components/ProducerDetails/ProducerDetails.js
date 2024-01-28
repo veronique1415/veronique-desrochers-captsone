@@ -6,7 +6,7 @@ import { Link, useParams } from "react-router-dom";
 import { Container, Row, Col, Card, Image } from "react-bootstrap";
 import "./ProducerDetails.scss"
 
-const ProducerDetails = ({text, imagePath, urlLink, morePath}) => {
+const ProducerDetails = () => {
     const {producerId} = useParams()
     const [producerProducts, setProducerProducts] = useState([])
     const [producer, setProducer] = useState([])

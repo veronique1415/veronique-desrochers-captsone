@@ -13,6 +13,12 @@
     }
   }
 
+  &__row {
+    @include tablet {
+      flex-wrap: nowrap;
+    }
+  }
+
   &__container--flex {
     max-width: 70%;
   }
@@ -24,5 +30,9 @@
     & h3 {
       @include font-body;
     }
+  }
+
+  &__name {
+    margin-top: 1rem;
   }
 }
