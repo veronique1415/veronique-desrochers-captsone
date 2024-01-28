@@ -15,11 +15,11 @@ const Footer = () => {
                     <ul className="footer__list">
                         <li className="footer__item"><Link to={"/about"} className="footer__link">About</Link></li>
                         <li className="footer__item"><Link to={"/producers"} className="footer__link">Producers</Link></li>
-                        <li className="footer__item mobile--footer"><Link to={"/wines"} className="footer__link">Available wines</Link></li>
+                        <li className="footer__item mobile--footer"><Link to={"/wines"} className="footer__link">In Stock</Link></li>
                         <li className="footer__item mobile--footer"><Link to={"/findUs"} className="footer__link">Find us!</Link></li>
                     </ul>
                     <ul className="footer__list">
-                        <li className="footer__item tablet--footer"><Link to={"/wines"} className="footer__link">Available wines</Link></li>
+                        <li className="footer__item tablet--footer"><Link to={"/wines"} className="footer__link">In Stock</Link></li>
                         <li className="footer__item tablet--footer"><Link to={"/findUs"} className="footer__link">Find us!</Link></li>
                     </ul>
                 </Col>

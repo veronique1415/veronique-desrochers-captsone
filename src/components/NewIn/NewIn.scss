@@ -18,7 +18,8 @@
   transform: translateY(0);
 }
 
-.carousel {
+.list {
+  @include font-body;
   padding-left: 0.5rem;
   list-style-type: none;
   display: flex;
@@ -26,28 +27,54 @@
   padding-bottom: calc(0.75 * var(--gutter));
   margin-bottom: calc(-0.1 * var(--gutter));
   scroll-snap-type: x proximity;
-}
 
-.list__item {
-  flex: 0 0 auto;
-  scroll-snap-align: center;
-  margin-right: calc(var(--gutter) / 2);
-  overflow: hidden;
-}
+  &__item {
+    position: relative;
+    flex: 0 0 auto;
+    scroll-snap-align: center;
+    margin-right: calc(var(--gutter) / 2);
+    overflow: hidden;
 
-.list__link {
-  display: block;
-  width: 100%;
-  border-radius: 8px;
-  overflow: hidden;
-}
+    &--overview {
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      border-radius: 5px;
+      @include backgroundGradient;
+      opacity: 0.8;
+      transform: translateY(101%);
+      overflow-y: auto;
+      transition: transform 0.2s ease-in;
+    }
 
-.list__img {
-  width: 100%;
-  height: auto;
-  border-radius: 8px;
-  object-fit: cover;
-  max-height: 150px; /* Set a maximum height for the images */
+    &--text {
+      padding: 6px;
+      font-size: 16px;
+    }
+  }
+
+  &__link {
+    text-decoration: none;
+    color: black;
+    display: block;
+    width: 100%;
+    border-radius: 8px;
+    overflow: hidden;
+  }
+
+  &__img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    object-fit: cover;
+    max-height: 150px;
+  }
+
+  &__item:hover &__item--overview {
+    transform: translateY(0);
+  }
 }
 
 .mobile--new {
@@ -56,24 +83,8 @@
   }
 }
 
-// .tablet--new {
-//   @include tablet {
-//     display: none;
-//   }
-// }
-
-.list__overview {
-  background-color: #fff;
-  padding: 2rem;
-  position: absolute;
-  left: 0;
-  bottom: 0;
-  right: 0;
-  max-height: 100%;
-  transform: translateY(101%);
-  transition: transform 0.3s ease-in;
-}
-
-.list__item:hover .list__overview {
-  transform: translateY(0);
+.tablet--new {
+  @include tablet {
+    display: none;
+  }
 }

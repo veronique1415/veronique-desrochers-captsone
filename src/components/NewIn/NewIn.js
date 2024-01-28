@@ -31,13 +31,13 @@ const NewIn = () => {
 
   return <section className="newIn">
             <Banner text={"New arrivals"} />
-            <ul class="carousel tablet--new">
+            <ul class="list tablet--new">
                 {bottles.map((bottle) => (
                 <>  
-                <li className="list__item"><Link className="list__link product__card" to={`/wines/${bottle.product_id}`}>
+                <li className="list__item"><Link className="list__link" to={`/wines/${bottle.product_id}`}>
                     <img className="list__img" src={bottle.product_image} alt={bottle.product_name}></img>
-                    <div className="product__card--overview">
-                    <h3>{bottle.product_name}</h3>
+                    <div className="list__item--overview">
+                    <h3 className="list__item--text">{bottle.product_name}</h3>
                     </div>
                 </Link>
                 </li>

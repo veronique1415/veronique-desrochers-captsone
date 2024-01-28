@@ -25,12 +25,12 @@ const SideNav = () => {
         </Offcanvas.Header>  
         <Offcanvas.Body className='sidenav__modal--body'>
         <ul className='sidenav__list'>  
-            <li className='sidenav__item'><Link to={"/"} className='sidenav__link'>Home</Link></li>
-            <li className='sidenav__item'><Link to={"/about"} className='sidenav__link'>About</Link></li>
-            <li className='sidenav__item'><Link to={"/producers"} className='sidenav__link'>Our Producers</Link></li>
-            <li className='sidenav__item'><Link to={"/wines"} className='sidenav__link'>Wines</Link></li>
-            <li className='sidenav__item'><Link to={"/listing"} className='sidenav__link'>Listing</Link></li>
-            <li className='sidenav__item'><Link to={"findUs"} className='sidenav__link'>Find Us</Link></li>
+            <li className='sidenav__item'><Link to={"/"} className='sidenav__link' onClick={closeSidebar}>Home</Link></li>
+            <li className='sidenav__item'><Link to={"/about"} className='sidenav__link' onClick={closeSidebar}>About</Link></li>
+            <li className='sidenav__item'><Link to={"/producers"} className='sidenav__link' onClick={closeSidebar}>Our Producers</Link></li>
+            <li className='sidenav__item'><Link to={"/wines"} className='sidenav__link' onClick={closeSidebar}>Wines</Link></li>
+            <li className='sidenav__item'><Link to={"/listing"} className='sidenav__link' onClick={closeSidebar}>Listing</Link></li>
+            <li className='sidenav__item'><Link to={"findUs"} className='sidenav__link' onClick={closeSidebar}>Find Us</Link></li>
         </ul>
         <div className='sidenav__logo--container'>
           <Link to={"https://www.instagram.com/grand.ordinaire/"} className="sidenav__link sidenav__logo"><FontAwesomeIcon icon={faInstagram} className='fa-2xl'/></Link>

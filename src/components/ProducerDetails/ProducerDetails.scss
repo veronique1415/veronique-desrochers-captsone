@@ -3,7 +3,13 @@
 @use '../../styles/partials/mixins' as *;
 
 .producer {
+  &__container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
   &__image {
-    width: 100%;
+    max-width: 70%;
+    border-radius: 10px;
   }
 }

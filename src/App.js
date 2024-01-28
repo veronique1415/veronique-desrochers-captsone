@@ -10,28 +10,39 @@ import WineDetailsPage from './pages/WineDetailsPage/WineDetailsPage';
 import NotFoundPage from "./pages/NotFoundPage/NotFoundPage"
 import Footer from './components/Footer/Footer';
 import 'bootstrap/dist/css/bootstrap.min.css'
-import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import { useLayoutEffect } from 'react';
+import { BrowserRouter, Routes, Route, useLocation } from 'react-router-dom';
 import './App.scss';
 
 
 
 
 function App() {
+  const Wrapper = ({children}) => {
+    const location = useLocation();
+    useLayoutEffect(() => {
+      document.documentElement.scrollTo(0, 0);
+    }, [location.pathname]);
+    return children
+  } 
+
   return (
     <BrowserRouter>
-      <Header />
-      <Routes>
-        <Route path='/' element={<HomePage />} />
-        <Route path='/about' element={<AboutPage />} />
-        <Route path='/findUs' element={<FindUsPage />} />
-        <Route path='/listing' element={<ListingPage />} />
-        <Route path='/producers' element={<ProducersPage />} />
-        <Route path='/producers/:producerId' element={<ProducerDetailsPage />} />
-        <Route path='/wines' element={<WinesPage />} />
-        <Route path='/wines/:wineId' element={<WineDetailsPage />} />
-        <Route path='/*' element={<NotFoundPage />} />
-      </Routes>
-      <Footer />
+      <Wrapper>
+        <Header />
+        <Routes>
+          <Route path='/' element={<HomePage />} />
+          <Route path='/about' element={<AboutPage />} />
+          <Route path='/findUs' element={<FindUsPage />} />
+          <Route path='/listing' element={<ListingPage />} />
+          <Route path='/producers' element={<ProducersPage />} />
+          <Route path='/producers/:producerId' element={<ProducerDetailsPage />} />
+          <Route path='/wines' element={<WinesPage />} />
+          <Route path='/wines/:wineId' element={<WineDetailsPage />} />
+          <Route path='/*' element={<NotFoundPage />} />
+       </Routes>
+        <Footer />
+      </Wrapper>
     </BrowserRouter>
   );
 }

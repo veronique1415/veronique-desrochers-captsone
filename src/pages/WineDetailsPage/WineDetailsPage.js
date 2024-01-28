@@ -1,5 +1,5 @@
 import Banner from "../../components/Banner/Banner";
-import { Link, useParams } from "react-router-dom";
+import { Link , useParams } from "react-router-dom";
 import axios from "axios";
 import { useState, useEffect } from "react";
 import { Container, Row, Col, Card, Image} from "react-bootstrap";
@@ -39,6 +39,7 @@ const WineDetailsPage = () => {
     }, [wineId])
 
 
+
     return (
         <main>
             <Banner text={`${product.product_name}, ${product.product_producer}`}/>
@@ -48,23 +49,23 @@ const WineDetailsPage = () => {
                          <Col className="wine__image--container">
                             <Image src={product.product_image}  className="wine__image"/>
                         </Col>
-                             <Col className="py-2">
+                             <Col className="py-3 wine__list--container">
                                 <ul className="wine__list">
-                                <li className="wine__item">
-                                    <Map />
-                                    <span className="wine__item--span">Where it's from : </span>
-                                    {product.product_region}
-                                </li>  
-                                <li className="wine__item">    
-                                    <Grape />
-                                    <span className="wine__item--span">Varietals : </span>
-                                    {product.product_varietal}
-                                </li>
-                                <li className="wine__item">
-                                    <WineIcon /> 
-                                    <span className="wine__item--span">How it is : </span>
-                                    {product.product_description}
-                                </li>  
+                                    <li className="wine__item">
+                                        <Map />
+                                        <span className="wine__item--span">Where it's from : </span>
+                                        {product.product_region}
+                                    </li>  
+                                    <li className="wine__item">    
+                                        <Grape />
+                                        <span className="wine__item--span">Varietals : </span>
+                                        {product.product_varietal}
+                                    </li>
+                                    <li className="wine__item">
+                                        <WineIcon /> 
+                                        <span className="wine__item--span">How it is : </span>
+                                        {product.product_description}
+                                    </li>  
                                 </ul>
                             </Col>
 
@@ -72,7 +73,7 @@ const WineDetailsPage = () => {
                 </Container>
                 </section>
                     <section>
-                     <Banner text={"These bottles might interested you as well"}/>
+                     <Banner text={"These bottles might interest you as well"}/>
                     <Container fluid className="pb-4">
                         <Row xs={2} sm={3} md={4} lg={5} className="image__flex-container">
                             {allProducts.map((bottle) => (

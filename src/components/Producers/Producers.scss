@@ -12,6 +12,10 @@
       transform: scale(1.05);
     }
   }
+
+  &__container--flex {
+    max-width: 70%;
+  }
   &__link {
     text-align: center;
     text-decoration: none;

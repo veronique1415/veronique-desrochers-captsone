@@ -40,7 +40,7 @@ const ProducerDetails = ({text, imagePath, urlLink, morePath}) => {
         <Banner text={`${producer.producer_name} - ${producer.producer_village}, ${producer.producer_region}`}/>
         <Container>
             <Row xs={1} lg={2} >
-                <Col className="pb-3">
+                <Col className="pb-3 producer__container">
                 <Image src={producer.producer_image}  className="producer__image"/>
                 </Col>
                 <Col>
