@@ -13,17 +13,18 @@
   &__container {
     padding: 1rem 2rem;
     display: flex;
-    justify-content: space-around;
     align-items: center;
     flex-direction: column;
     width: 100%;
 
     @include tablet {
+      justify-content: space-around;
       flex-direction: row;
     }
   }
 
   &__list {
+    padding-left: 0;
     font-weight: 600;
     @include font-body;
     list-style-type: none;

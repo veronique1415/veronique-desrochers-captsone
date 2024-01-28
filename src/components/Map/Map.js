@@ -9,7 +9,7 @@ import {
   InfoWindow,
 } from "@vis.gl/react-google-maps";
 import "./Map.scss"
-import { Link } from "react-router-dom";
+
 
 const MapComp = () => {
   //position for map and restaurants locations

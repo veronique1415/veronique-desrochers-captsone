@@ -15,19 +15,19 @@ const About = () => {
         p3={"Join us on a journey to savor wines that go beyond the ordinary – each bottle a testament to the harmonious relationship between the vine, the earth, and the skilled hands that bring them together. Grand Ordinaire: where passion meets terroir, and every glass tells a story of authenticity, sustainability, and the pure joy of natural winemaking."}
         />
         <Banner text={"Meet our team"}/>
-        <Container className="about-card">
+        <Container className="about-card__whole-container">
             <Row xs={1} md={2}>
                 <Col className="about-card__container py-3">
-                    <Card>
-                        <Card.Img src={Larry} alt="Larry"/>
+                <h3 className="about-card__name">Lawrence Fiset</h3>
+                    <Card className="about-card">
+                        <Card.Img className="about-card__image" src={Larry} alt="Larry"/>
                     </Card>
-                    <h3>Larry!</h3>
                 </Col>
                 <Col className="about-card__container py-3">
-                    <Card>
-                        <Card.Img src={John} alt="John"/>
+                <h3 className="about-card__name">John Hale</h3>
+                    <Card className="about-card">
+                        <Card.Img src={John} alt="John" className="about-card__image"/>
                     </Card>
-                    <h3>John</h3>
                 </Col>
             </Row>
         </Container>
