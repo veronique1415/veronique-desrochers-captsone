@@ -5,8 +5,6 @@
 <summary>Overview</summary>
 ## Overview
 
-What is your app? Brief description in a couple of sentences.
-
 My app will be a brand website to help a local wine importer to shine. Hopefully having his own website that showcases the products that he imports and the producers he works with. I want to include a find Us page that gives the user a list of restaurant were the importer's products are available. Hopefully my app will help him make more sale and in the futur I would like to create an inventory app for importers too! (This is for another time)
 
 </details>
@@ -14,8 +12,6 @@ My app will be a brand website to help a local wine importer to shine. Hopefully
 <details>
 <summary>Problem</summary>
 ### Problem
-
-Why is your app needed? Background information around any pain points or other reasons.
 
 I personnaly think that in the world we live in, in 2024 and in a really dynamic and fast-paced city like Montreal, if you have a brand or side business and you don't have a good branding like an instagram page, functional website, your logo, to name a few, to highlight your products, it's really hard to grow and not be outshined by other similar businesses.
 
@@ -198,6 +194,7 @@ const vinMonLapin = { lat: 45.53300094604492, lng: -73.61061096191406};
 const [open, setOpen] = useState(false); -->
 
 return (
+
 <article className="map__container">
 <APIProvider apiKey={process.env.REACT_APP_GOOGLE_MAPS_KEY}>
 <div className="map">
@@ -252,8 +249,6 @@ Response:
 <summary>Roadmap</summary>
 ## Roadmap
 
-Scope your project as a sprint. Break down the tasks that will need to be completed and map out timeframes for implementation. Think about what you can reasonably complete before the due date. The more detail you provide, the easier it will be to build.
-
 1. Create a mock up of every pages to let me identify every component and see if I can easily repeat them on mulitple pages. This
 2. Do the styling of my website (I like starting with what I'm really comfortable with) I probablye can have this done in a week.
 3. Do the routes of my app (couple hours for sure)
@@ -288,4 +283,3 @@ I say in the futur because I wanna try to be realistic with what I think I can p
 
 </details>
 </details>
-```
