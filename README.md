@@ -180,7 +180,7 @@ I have 1 database with 2 tables.
 <summary>Endpoints</summary>
 ### Endpoints
 
-<!-- "use client";
+"use client";
 
 import { useState } from "react";
 import {
@@ -197,14 +197,14 @@ const position = { lat: 45.508888, lng: -73.561668 };
 const vinMonLapin = { lat: 45.53300094604492, lng: -73.61061096191406};
 const [open, setOpen] = useState(false); -->
 
-  <!-- return (
-    <article className="map__container">
-      <APIProvider apiKey={process.env.REACT_APP_GOOGLE_MAPS_KEY}>
-        <div className="map">
-          <Map zoom={13} center={position} mapId={process.env.REACT_APP_GOOGLE_MAPS_STYLE}>
-            <AdvancedMarker position={vinMonLapin} onClick={() => setOpen(true)}>
-              <Pin />
-            </AdvancedMarker>
+return (
+<article className="map__container">
+<APIProvider apiKey={process.env.REACT_APP_GOOGLE_MAPS_KEY}>
+<div className="map">
+<Map zoom={13} center={position} mapId={process.env.REACT_APP_GOOGLE_MAPS_STYLE}>
+<AdvancedMarker position={vinMonLapin} onClick={() => setOpen(true)}>
+<Pin />
+</AdvancedMarker>
 
             {open && (
               <InfoWindow position={vinMonLapin} onCloseClick={() => setOpen(false)}>
@@ -214,9 +214,10 @@ const [open, setOpen] = useState(false); -->
           </Map>
         </div>
       </APIProvider>
-    </article>  
-  );
-} -->
+    </article>
+
+);
+}
 
 This is how I fetch GoogleMaps into my app. It takes a API key and a map style number. I already tested it and it works.
 
