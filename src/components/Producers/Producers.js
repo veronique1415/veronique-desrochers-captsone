@@ -7,8 +7,8 @@ import axios from "axios";
 import "./Producers.scss"
 
 const Producers = ({text}) => {
-
-    const producersUrl = "http://localhost:8080/producers"
+    const baseUrl = process.env.REACT_APP_BASE_URL
+    const producersUrl = `${baseUrl}producers`
     const [producers, setProducers] = useState([]);
 
     const getProducers = async () => {
@@ -21,6 +21,7 @@ const Producers = ({text}) => {
     }
     useEffect(()=>{
         getProducers()
+        // eslint-disable-next-line react-hooks/exhaustive-deps
     }, [])
 
     if(producers === undefined) {

@@ -6,7 +6,10 @@ import axios from "axios";
 import "./NewIn.scss"
 
 const NewIn = () => {
-    const bottleUrl = "http://localhost:8080/products"
+    const baseUrl = process.env.REACT_APP_BASE_URL
+   
+    const bottleUrl = `${baseUrl}products`
+    console.log(bottleUrl)
     const [bottles, setBottles] = useState([]);
 
     const getBottles = async () => {
@@ -21,6 +24,7 @@ const NewIn = () => {
     }
     useEffect(()=>{
         getBottles()
+        // eslint-disable-next-line react-hooks/exhaustive-deps
     }, [])
 
     if(bottles === undefined) {
@@ -34,7 +38,7 @@ const NewIn = () => {
             <ul class="list tablet--new">
                 {bottles.map((bottle) => (
                 <>  
-                <li className="list__item"><Link className="list__link" to={`/wines/${bottle.product_id}`}>
+                <li key={bottle.product_id} className="list__item"><Link className="list__link" to={`/wines/${bottle.product_id}`}>
                     <img className="list__img" src={bottle.product_image} alt={bottle.product_name}></img>
                     <div className="list__item--overview">
                     <h3 className="list__item--text">{bottle.product_name}</h3>

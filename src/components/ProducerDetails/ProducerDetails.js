@@ -1,6 +1,6 @@
 import Banner from "../Banner/Banner";
 import LongText from "../LongText/LongText";
-import { useState, useEffect } from "react";
+import { useState, useEffect, useCallback } from "react";
 import axios from "axios";
 import { Link, useParams } from "react-router-dom";
 import { Container, Row, Col, Card, Image } from "react-bootstrap";
@@ -10,25 +10,29 @@ const ProducerDetails = () => {
     const {producerId} = useParams()
     const [producerProducts, setProducerProducts] = useState([])
     const [producer, setProducer] = useState([])
+    const baseUrl = process.env.REACT_APP_BASE_URL
+    const producerProductsUrl =  `${baseUrl}producers/${producerId}/products`
+    const producerUrl =  `${baseUrl}producers/${producerId}`
 
-    const producerProductsUrl =  `http://localhost:8080/producers/${producerId}/products`
-    const producerUrl =  `http://localhost:8080/producers/${producerId}`
-
-    const getProducts =  async () => {
-        const response = await axios.get(producerProductsUrl)
-        setProducerProducts(response.data)
-    }
-
-    const getProducer =  async () => {
-        const response = await axios.get(producerUrl)
-        console.log("single producer",response.data)
-        setProducer(response.data)
-    }
-
-    useEffect(() => {
-        getProducts()
-        getProducer()
-    }, [producerId])
+    const getProducts = useCallback(async () => {
+        const response = await axios.get(producerProductsUrl);
+        setProducerProducts(response.data);
+      }, [producerProductsUrl]);
+    
+      const getProducer = useCallback(async () => {
+        const response = await axios.get(producerUrl);
+        console.log("single producer", response.data);
+        setProducer(response.data);
+      }, [producerUrl]);
+    
+      useEffect(() => {
+        const fetchData = async () => {
+          await getProducts();
+          await getProducer();
+        };
+    
+        fetchData();
+      }, [producerId, getProducts, getProducer]);
 
     if(producerProducts === undefined || producer === undefined) {
         return <div>Loading...</div>

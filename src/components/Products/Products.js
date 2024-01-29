@@ -7,20 +7,22 @@ import "./Products.scss"
 
 
 const Products = ({text}) => {
-
-    const bottleUrl = "http://localhost:8080/products"
+    const baseUrl = process.env.REACT_APP_BASE_URL
+    const bottleUrl = `${baseUrl}products`
     const [bottles, setBottles] = useState([]);
 
-    const getBottles = async () => {
-        try {
-            const response = await axios.get(bottleUrl)
-            setBottles(response.data)
-        } catch (error) {
-            console.log("Unable to retrieve picture", error)
-        }
-    }
+
     useEffect(()=>{
+        const getBottles = async () => {
+            try {
+                const response = await axios.get(bottleUrl)
+                setBottles(response.data)
+            } catch (error) {
+                console.log("Unable to retrieve picture", error)
+            }
+        }
         getBottles()
+        // eslint-disable-next-line react-hooks/exhaustive-deps
     }, [])
 
     if(bottles === undefined) {
