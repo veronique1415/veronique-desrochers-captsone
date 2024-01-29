@@ -77,6 +77,8 @@ Here's a list of tech I used to make this app:
 -MySQL
 -Sass
 -Express
+-Knex
+-Bootstrap
 
 </details>
 <details>
