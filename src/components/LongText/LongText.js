@@ -1,4 +1,4 @@
-import { Container, Row, Stack, Col } from "react-bootstrap";
+import { Container, Row, Col } from "react-bootstrap";
 import "./LongText.scss"
 
 const LongText = ({p1, p2, p3}) => {
