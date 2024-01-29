@@ -3,7 +3,8 @@ import "./LongText.scss"
 
 const LongText = ({p1, p2, p3}) => {
   return (
-    <Container>
+    <section>
+      <Container>
             <Row>
                  <Col className="paragraph__container p-3 mx-2">
                     <Stack gap={3}>
@@ -13,7 +14,8 @@ const LongText = ({p1, p2, p3}) => {
                      </Stack>
                 </Col>
             </Row>
-        </Container>
+          </Container>
+      </section>
   )
 };
 
