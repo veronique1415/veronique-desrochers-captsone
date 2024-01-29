@@ -59,13 +59,13 @@
     text-decoration: none;
     color: black;
     display: block;
-    // width: auto;
+    width: auto;
     border-radius: 0.5rem;
     overflow: hidden;
   }
 
   &__img {
-    width: 100%;
+    width: auto;
     height: auto;
     border-radius: 0.5rem;
     object-fit: cover;
