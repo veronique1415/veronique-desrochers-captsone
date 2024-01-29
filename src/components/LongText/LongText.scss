@@ -3,7 +3,7 @@
 @use '../../styles/partials/mixins' as *;
 
 .paragraph__container {
-  border-radius: 10px;
+  border-radius: 0.625rem;
   @include border-all;
   @include font-body;
 }

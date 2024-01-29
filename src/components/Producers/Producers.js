@@ -16,7 +16,7 @@ const Producers = ({text}) => {
             const response = await axios.get(producersUrl)
             setProducers(response.data)
         } catch (error) {
-            console.log("Unable to retrieve picture", error)
+            console.error("Unable to retrieve picture", error)
         }
     }
     useEffect(()=>{

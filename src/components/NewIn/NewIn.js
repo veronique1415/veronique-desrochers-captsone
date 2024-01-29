@@ -9,7 +9,7 @@ const NewIn = () => {
     const baseUrl = process.env.REACT_APP_BASE_URL
    
     const bottleUrl = `${baseUrl}products`
-    console.log(bottleUrl)
+
     const [bottles, setBottles] = useState([]);
 
     const getBottles = async () => {
@@ -19,7 +19,7 @@ const NewIn = () => {
             const filteredBottles = dataBottles.slice(0, 6)
             setBottles(filteredBottles)
         } catch (error) {
-            console.log("Unable to retrieve picture", error)
+            console.error("Unable to retrieve picture", error)
         }
     }
     useEffect(()=>{
@@ -30,7 +30,7 @@ const NewIn = () => {
     if(bottles === undefined) {
         return <div>Loading...</div>
     }
-    console.log("bottle",bottles)
+   
 
 
   return <section className="newIn">

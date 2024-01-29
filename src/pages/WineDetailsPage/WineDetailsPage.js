@@ -1,7 +1,7 @@
 import Banner from "../../components/Banner/Banner";
 import { Link , useParams } from "react-router-dom";
 import axios from "axios";
-import { useState, useEffect, useCallback } from "react";
+import { useState, useEffect } from "react";
 import { Container, Row, Col, Card, Image} from "react-bootstrap";
 import { Grape } from "lucide-react";
 import { WineIcon } from "lucide-react";
@@ -23,26 +23,23 @@ const WineDetailsPage = () => {
     const producerUrl =  `${baseUrl}products/${wineId}`
     const allProductsUrl = `${baseUrl}products`
 
-    const getProduct = useCallback(async () => {
-        const response = await axios.get(producerUrl);
-        console.log("single producer", response.data);
-        setProduct(response.data);
-      }, [producerUrl]);
-    
-      const getAllProducts = useCallback(async () => {
-        const response = await axios.get(allProductsUrl);
-        console.log("all products", response.data);
-        setAllProducts(response.data);
-      }, [allProductsUrl]);
-    
-      useEffect(() => {
-        const fetchData = async () => {
-          await getProduct();
-          await getAllProducts();
-        };
-    
-        fetchData();
-      }, [wineId, getProduct, getAllProducts]);
+    const getProduct =  async () => {
+        const response = await axios.get(producerUrl)
+        console.log("single producer",response.data)
+        setProduct(response.data)
+    }
+
+    const getAllProducts =  async () => {
+        const response = await axios.get(allProductsUrl)
+        console.log("single producer",response.data)
+        setAllProducts(response.data)
+    }
+
+    useEffect(() => {
+        getProduct()
+        getAllProducts()
+        // eslint-disable-next-line react-hooks/exhaustive-deps
+    }, [wineId])
 
 
 

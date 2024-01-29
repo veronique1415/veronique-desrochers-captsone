@@ -5,7 +5,7 @@
 .wine {
   &__image {
     max-width: 70%;
-    border-radius: 10px;
+    border-radius: 0.625rem;
 
     @include tablet {
       max-width: 100%;

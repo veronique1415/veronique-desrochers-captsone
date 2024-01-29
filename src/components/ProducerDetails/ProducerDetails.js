@@ -1,6 +1,6 @@
 import Banner from "../Banner/Banner";
 import LongText from "../LongText/LongText";
-import { useState, useEffect, useCallback } from "react";
+import { useState, useEffect} from "react";
 import axios from "axios";
 import { Link, useParams } from "react-router-dom";
 import { Container, Row, Col, Card, Image } from "react-bootstrap";
@@ -14,25 +14,23 @@ const ProducerDetails = () => {
     const producerProductsUrl =  `${baseUrl}producers/${producerId}/products`
     const producerUrl =  `${baseUrl}producers/${producerId}`
 
-    const getProducts = useCallback(async () => {
-        const response = await axios.get(producerProductsUrl);
-        setProducerProducts(response.data);
-      }, [producerProductsUrl]);
-    
-      const getProducer = useCallback(async () => {
-        const response = await axios.get(producerUrl);
-        console.log("single producer", response.data);
-        setProducer(response.data);
-      }, [producerUrl]);
-    
-      useEffect(() => {
-        const fetchData = async () => {
-          await getProducts();
-          await getProducer();
-        };
-    
-        fetchData();
-      }, [producerId, getProducts, getProducer]);
+    const getProducts =  async () => {
+      const response = await axios.get(producerProductsUrl)
+      setProducerProducts(response.data)
+  }
+
+  const getProducer =  async () => {
+      const response = await axios.get(producerUrl)
+      console.log("single producer",response.data)
+      setProducer(response.data)
+  }
+
+  useEffect(() => {
+      getProducts()
+      getProducer()
+       // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [producerId])
+
 
     if(producerProducts === undefined || producer === undefined) {
         return <div>Loading...</div>

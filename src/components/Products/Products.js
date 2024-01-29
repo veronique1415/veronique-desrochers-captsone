@@ -12,23 +12,24 @@ const Products = ({text}) => {
     const [bottles, setBottles] = useState([]);
 
 
-    useEffect(()=>{
-        const getBottles = async () => {
-            try {
-                const response = await axios.get(bottleUrl)
-                setBottles(response.data)
-            } catch (error) {
-                console.log("Unable to retrieve picture", error)
-            }
+    const getBottles = async () => {
+        try {
+            const response = await axios.get(bottleUrl)
+            setBottles(response.data)
+        } catch (error) {
+            console.log("Unable to retrieve picture", error)
         }
+    }
+    useEffect(()=>{
         getBottles()
         // eslint-disable-next-line react-hooks/exhaustive-deps
     }, [])
 
+
     if(bottles === undefined) {
         return <div>Loading...</div>
     }
-    console.log("bottle",bottles)
+
 
   return (
     <section className="products">
