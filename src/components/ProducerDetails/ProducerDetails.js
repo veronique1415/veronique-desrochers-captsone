@@ -36,7 +36,7 @@ const ProducerDetails = () => {
         return <div>Loading...</div>
     }
 
-    
+    console.log(producer.producer_description3)
   return (
     <section className="producer">
         <Banner text={`${producer.producer_name} - ${producer.producer_village}, ${producer.producer_region}`}/>
@@ -55,7 +55,7 @@ const ProducerDetails = () => {
         </Container>
         <Banner text={"Shop their creations"}/>
         <Container fluid className="pb-4">
-                <Row xs={2} sm={3} md={4} lg={5} className="justify-content-center">
+                <Row xs={2} md={4} lg={5} className="justify-content-center">
                 {producerProducts.map((product) => (
                             <Col className="py-1 product__card--col">
                         <Link to={`/wines/${product.product_id}`}>

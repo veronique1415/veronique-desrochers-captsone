@@ -6,4 +6,12 @@
   border-radius: 0.625rem;
   @include border-all;
   @include font-body;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  overflow: hidden;
+}
+
+.paragraph__container {
+  word-wrap: break-word;
 }
