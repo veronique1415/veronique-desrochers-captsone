@@ -27,30 +27,42 @@ I think their will always be a need for a e-commerce plateform, especially user 
 <summary>User Profile</summary>
 ### User Profile
 
-Who will use your app? How will they use it? Any special considerations that your app must take into account.
-
-Hopefully my app would be used by two types of person.
-
-First one : my client, who will be able to use his "backend" to upload pictures of his products with descriptions and prices to facilitate his sales.
-
-second one: In this scenario, the users would use this website to read about my friend's imported wines, learn about wine production and be able to discover the great humans behind the wine bottle they shop for.
+The users would use this website to read about my friend's imported wines, learn about wine production and be able to discover the great humans behind the wine bottle they shop for.
 
 </details>
 <details>
 <summary>Features</summary>
 ### Features
 
-List the functionality that your app will include. These can be written as user stories or descriptions with related details. Do not describe _how_ these features are implemented, only _what_ needs to be implemented.
+-The Home Page displays 6 bottles in the new arrivals section no matter how many bottles are in the database. I did it using a splice method to only display the first 6 available. Later on, this will also be sort by dates of newest wines. For the moment they all have the same date of creation. On top of it, I added a carousel that scroll these bottles horizontally on mobile view.
 
--I would like to display about 10 new bottles on the home page, using a filter function to only keep the 10 first or the 10 last bottle of the array of bottles.
+-See what just came in on the main page, when the user hovers over the bottle it lets them see the name of the wine with a fun color transition.
 
--The user will be able to read about wine producers carried by the importers.
+-The user will be able to read about wine producers and their creations carried by the importers.
 
--See what just came in on the main page, when the user hovers over the bottle it lets them see some details of the wine with a fun color transition (I want to see the bottle image still but with a overlay of gradient color with low opacity and text over it)
+-There's a live map that displays where Grand Ordinaire wines can be found in Montreal and its surroundings. This map is found in the Find us page. The map view is only available on tablet view and up. For mobile you can click on the address and it will redirect you to google maps' website with the right restaurant address and informations for navigation.
 
--See a live map where products can be wines can be found in Montreal and its surroundings.
+- Read about the company's mission and who's the team behind.
 
--Read about the company's mission and who's the team behind.
+- You can find a downloadable PDF of the Grand Ordinaire's available products on the listing page.
+
+</details>
+<details>
+<summary>Instructions</summary>
+### Instructions
+
+1A.You can visit my repository live on this website : "https://develop--dynamic-crepe-c3c437.netlify.app/"
+
+1B. You must download a zip file from main, open it in VScode and npm i or npm install all dependencies.
+
+2. I use three environment variables, two of which are not ment to be shared publicly. If you were to install my app on your own VSCODE, you should know that the google map part won't be functional since I won't be sharing my api key of course! But if you were to have an existing account with google maps api you can create a new map to have the map style code.
+   REACT_APP_GOOGLE_MAPS_KEY=Your_Own_KEY
+   REACT_APP_GOOGLE_MAPS_STYLE=Your_Own_Map_Style
+   REACT_APP_BASE_URL=http://localhost:8080/
+
+   -The third environement variable is used if you intend to run my back end on your computer as well. You can find my back end repository here : "https://github.com/veronique1415/GO-Backend".
+
+3.Run npm start in the your terminal.
 
 </details>
 <details>
@@ -61,38 +73,34 @@ List the functionality that your app will include. These can be written as user 
 <summary>Tech Stack</summary>
 ### Tech Stack
 
-List technologies that will be used in your app, including any libraries to save time or provide more functionality. Be sure to research any potential limitations.
-
-I will be using:
+Here's a list of tech I used to make this app:
 
 -React
 -React-router-dom
 -Axios
 -MySQL
--Sass (obvi)
--express
+-Sass
+-Express
 
 </details>
 <details>
 <summary>APIs</summary>
 ### APIs
 
-List any external sources of data that will be used in your app.
+I used google Maps embeded map to show users where they can find the importer's bottle of wine in Montreal. Each marker will show a restaurant or store's name and address.
 
-I would like to use google Maps embeded map to show users where they can find the importer's bottle of wine in Montreal. Each marker will show a restaurant or store's name and address.
-
-I will use my own API that hopefully is connected to my own database.
+I use my own API as well. You can find my back-end repository here : "https://github.com/veronique1415/GO-Backend"
 
 </details>
 <details>
 <summary>Sitemap</summary>
 ### Sitemap
 
-In terms of what pages this website will showcase :
+- The HomePage showcases new arrivals and a hero picture.
 
 - About section that gives you a description of their mission with this company + a brief presentation of the team behind it.
 
-- Find us section that will show the user where their products can be found in Quebec
+- Find us section that show the user where their products can be found in Quebec
 
 - Producers section that give a description of who's being the production of every single bottle of wine and where they are from and which wine does the importer carry from them at the moment.
 
@@ -116,17 +124,32 @@ I have make a mockup of my Home and About sections.
 ![](./src/assets/Mockups/WineDetails.png)
 ![](./src/assets/Mockups/Listing.png)
 
-About (About.png)
+</details>
+
+<details>
+<summary>Screenshots</summary>
+### Screenshots
+
+Here you can find screen shot of what the website looks like when launched as prototype 1 :
+
+![](./src/assets/screenshots/homepage__mobile.jpg)
+![](./src/assets/screenshots/about_mobile.png)
+![](./src/assets/screenshots/producers__mobile.png)
+![](./src/assets/screenshots/producer-details_mobile.png)
+![](./src/assets/screenshots/products__mobile.png)
+![](./src/assets/screenshots/product-detail__mobile.png)
+![](./src/assets/screenshots/listing__mobile.png)
+![](./src/assets/screenshots/find-us__mobile.png)
+
+Note that I only included screenshots of mobile view
 
 </details>
 <details>
 <summary>Data</summary>
 ### Data
 
-Describe your data and the relationships between them. You can show this visually using diagrams, or write it out.
-
-I want to store my data in a database. This is what I really wanna play with for this Capstone, I wanna get comfortable with it.
-I'd have 1 database, 2 tables. My only concern is how to store images, espcially if I want to store uploaded picture in the futur. I wanna say it should be in my public folder but I'm not sure yet.
+I store my data in a database. This is what I really wanted to play with for this Capstone, I wanted to get comfortable with it.
+I have 1 database with 2 tables.
 
 1. Producers {
    producer_id
@@ -142,10 +165,12 @@ I'd have 1 database, 2 tables. My only concern is how to store images, espcially
    wine_id
    wine_name
    wine_region
-   wine_appellation
+   wine_appelation
    wine_description
    wine_image
    wine_varietal
+   wine_producer
+   wine_vinatge
    }
 
 ![](./src/assets/Mockups/drawSQL-grand-ordinaire.png)
@@ -242,8 +267,22 @@ Scope your project as a sprint. Break down the tasks that will need to be comple
 
 </details>
 <details>
+<summary>Lessons learned</summary>
+## Lessons learned
+
+Where to start?
+
+Building a web app that's all your can mean that you might tend to turn some corners you wouldn't if having an actual style guide and data science based research. I think this app showcases really well my abilities but I think that for now it is no where near semantically perfect visually. I am no designer and I didn't interview anyone before building this website so you can tell it is solely based on my own taste.
+
+When making a carousel of my own while using libraries like bootstrap, you can rapidely fall into this pitt of css being overwritten by the said library. I basically add to make a new section that only displays itself on mobile and displays none when on tablet to keep using bootstrap for the rest of my layout. This one was a bit more challenging and made me a bit worried about the semantics again. I think this is all a big learning experience and I would probably do the whole section over without bootstrap if I had more time and energy.
+
+I'm gonna be honest, the rest was pretty seamless. I found myself having a lot of fun creating my own project, revisting my old projects here and there to add functionalities I've used in the past. I can't wait to build a completely new app or make this one better soon.
+
+</details>
+<details>
 <summary>Nice-to-haves</summary>
 ## Nice-to-haves
+
 I would like to add a search bar that let you search your product by name or producer
 
 I wanna add authentification to add an upload page for the admin.
