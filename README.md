@@ -246,13 +246,7 @@ Response:
 ![](./src/assets/Mockups/singleproduct.png)
 
 </details>
-<details>
-<summary>Auth</summary>
-<!-- ### Auth
 
-<!-- Does your project include any login or user profile functionality? If so, describe how authentication/authorization will be implemented.  -->
-
-</details>
 <details>
 <summary>Roadmap</summary>
 ## Roadmap
