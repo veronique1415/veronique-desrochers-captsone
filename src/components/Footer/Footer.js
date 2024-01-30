@@ -27,7 +27,6 @@ const Footer = () => {
                 <h2>LOGO</h2>
                 </Col>
                 <Col className="footer__containers justify-content-center">
-                <p className="footer__contact-us">Contact us</p>
                 <button className="footer__email" onClick={() => window.location.href = 'mailto:larry@grandordinaire.com'}><FontAwesomeIcon icon={faEnvelope} className='fa-2xl'/></button>
                 <Link to={"https://www.instagram.com/grand.ordinaire/"} className="sidenav__link sidenav__logo"><FontAwesomeIcon icon={faInstagram} className='fa-2xl'/></Link>
                 </Col>

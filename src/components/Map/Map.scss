@@ -4,7 +4,7 @@
 
 .map {
   width: 16rem;
-  height: 80svh;
+  height: 65svh;
 
   @include tablet {
     width: 40rem;
@@ -18,7 +18,7 @@
     width: 100%;
 
     @include tablet {
-      justify-content: space-around;
+      justify-content: space-evenly;
       flex-direction: row;
     }
   }
@@ -43,7 +43,7 @@
   &__items {
     font-weight: 600;
     @include font-body;
-    padding: 0.2rem;
+    padding: 0.5rem;
 
     @include tablet {
       font-weight: 400;
