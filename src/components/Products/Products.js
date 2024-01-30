@@ -35,7 +35,7 @@ const Products = ({text}) => {
     <section className="products">
         <Banner text={text}/>
         <Container>
-            <Row xs={2} md={4} lg={6}>
+            <Row xs={2} md={4} lg={7}>
                 {bottles.map((bottle) => (
                     <Col className="pb-3">
                         <Link to={`/wines/${bottle.product_id}`} className="products__link">

@@ -11,7 +11,7 @@ const Header = () => {
             <nav className="nav">
             <Container style={{ marginRight: 0}} className="mw-100">
                 <Row className="pr-0">
-                    <Col className="header__container py-3" xs={8} md={10}>
+                    <Col className="header__container py-4" xs={8} md={10}>
                         <Link to={"/"} className="header__heading"><h1 className="header__heading">Grand Ordinaire.</h1></Link>
                     </Col>
                     <Col xs={2} md={1} className="header__search">
