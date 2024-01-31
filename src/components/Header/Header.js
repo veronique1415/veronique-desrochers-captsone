@@ -3,6 +3,7 @@ import { Link } from "react-router-dom"
 import { Container, Row, Col} from "react-bootstrap"
 import "./Header.scss"
 import SideNav from "../SideNav/SideNav"
+import SearchBar from "../SearchBar/SearchBar"
 
 
 const Header = () => {
@@ -21,7 +22,8 @@ const Header = () => {
                         <SideNav/>
                         </Col>
                     </Row>
-                </Container>    
+                </Container> 
+                <SearchBar/>   
             </nav>
         </header>
     )
