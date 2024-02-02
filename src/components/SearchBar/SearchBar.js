@@ -42,6 +42,8 @@ const SearchBar = ({open}) => {
   useEffect(() => {
     if (!open) {
       setSearchInput("");
+      setProducerResults([]);
+      setProductsResults([]);
     }
   }, [open]);
 
