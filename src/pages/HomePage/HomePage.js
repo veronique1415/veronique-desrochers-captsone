@@ -37,7 +37,7 @@ const HomePage = () => {
           imagePath2={SaillardHero}
           imagePath3={swirlingWine}
         />
-        <NewIn bottles={bottles} />
+        <NewIn bottles={bottles}/>
       </main>
     </>
   );

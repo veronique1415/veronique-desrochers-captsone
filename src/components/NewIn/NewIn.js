@@ -32,9 +32,9 @@ const NewIn = ({ bottles }) => {
       <Container fluid className="pb-4 mobile--new">
         <Row xs={2} sm={3} md={4} lg={6} className="product__card--row">
           {bottles.map((bottle) => (
-            <Col className="py-1 product__card--col">
+            <Col className="py-1 product__card--col" key={bottle.product_id}>
               <Link to={`/wines/${bottle.product_id}`}>
-                <Card key={bottle.product_id} className="product__card">
+                <Card className="product__card">
                   <Card.Img
                     src={bottle.product_image}
                     alt={bottle.product_name}
