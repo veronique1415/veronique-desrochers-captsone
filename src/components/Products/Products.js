@@ -17,7 +17,7 @@ const Products = ({text}) => {
             const response = await axios.get(bottleUrl)
             setBottles(response.data)
         } catch (error) {
-            console.log("Unable to retrieve picture", error)
+            console.error("Unable to retrieve picture", error)
         }
     }
     useEffect(()=>{

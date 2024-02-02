@@ -25,13 +25,11 @@ const WineDetailsPage = () => {
 
     const getProduct =  async () => {
         const response = await axios.get(producerUrl)
-        console.log("single producer",response.data)
         setProduct(response.data)
     }
 
     const getAllProducts =  async () => {
         const response = await axios.get(allProductsUrl)
-        console.log("single producer",response.data)
         setAllProducts(response.data)
     }
 
