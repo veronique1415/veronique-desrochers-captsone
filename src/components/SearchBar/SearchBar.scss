@@ -28,6 +28,31 @@
 
 .results {
   max-width: none;
-  margin: 0;
+
   background-color: $Secondary-beige;
+
+  &__list {
+    @include font-subheader;
+    font-weight: 600;
+    list-style-type: none;
+    padding-bottom: 0.9rem;
+  }
+
+  &__item {
+    padding-top: 0.5rem;
+    text-decoration: none;
+    @include font-body;
+    font-weight: 400;
+  }
+
+  &__link {
+    color: black;
+    text-decoration: none;
+    @include font-body;
+    font-weight: 400;
+
+    &:hover {
+      text-decoration: underline;
+    }
+  }
 }

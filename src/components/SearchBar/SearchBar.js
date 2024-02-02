@@ -39,6 +39,12 @@ const SearchBar = ({open}) => {
     fetchData();
   }, [searchInput]);
 
+  useEffect(() => {
+    if (!open) {
+      setSearchInput("");
+    }
+  }, [open]);
+
 
 return (
   <section className="search">
@@ -66,7 +72,7 @@ return (
         {producerResults.length > 0 ? (
           <Row>
             <Col>
-              <ul className="results__list">Producer Results</ul>
+              <ul className="results__list">Producers Results
               {producerResults.map((producer) => (
                 <li className="results__item" key={producer.producer_id}>
                   <Link
@@ -78,18 +84,19 @@ return (
                   {/* Add more details if needed */}
                 </li>
               ))}
+              </ul>
             </Col>
           </Row>
         ) : searchInput.trim() !== "" ? (
           <ul className="results__list">Producers Results
-          <li>No matching product</li>
+          <li className="results__item">No matching producer</li>
           </ul>  
         ) : null}
 
         {productsResults.length > 0 ? (
           <Row>
             <Col>
-              <ul className="results__list">Products Results</ul>
+              <ul className="results__list">Products Results
               {productsResults.map((product) => (
                 <li className="results__item" key={product.product_id}>
                   <Link className="results__link"  to={`/wines/${product.product_id}`}>
@@ -97,12 +104,13 @@ return (
                   </Link>
                 </li>
               ))}
+              </ul>
             </Col>
           </Row>
         ) : searchInput.trim() !== "" ? (
           <ul className="results__list">Products Results
-          <li>No matching product</li>
-          </ul>   
+          <li className="results__item">No matching product</li>
+          </ul>
         ) : null}
       </Container>
     )}
