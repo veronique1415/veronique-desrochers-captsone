@@ -85,10 +85,10 @@ const WineDetailsPage = () => {
                 </section>
                     <section>
                      <Banner text={"These bottles might interest you as well"}/>
-                     <ul class="list tablet--new">
+                     <ul className="list tablet--new">
                         {allProducts.map((bottle) => (
                         <>  
-                        <li className="list__item"><Link className="list__link" to={`/wines/${bottle.product_id}`}>
+                        <li className="list__item" key={bottle.product_id}><Link className="list__link" to={`/wines/${bottle.product_id}`}>
                             <img className="list__img" src={bottle.product_image} alt={bottle.product_name}></img>
                             <div className="list__item--overview">
                             <h3 className="list__item--text">{bottle.product_name}</h3>
@@ -101,9 +101,9 @@ const WineDetailsPage = () => {
                     <Container fluid className="pb-4 mobile--new">
                         <Row xs={2} sm={3} md={4} lg={5} className="image__flex-container">
                             {allProducts.map((bottle) => (
-                                <Col className="py-1 product__card--col">
+                                <Col className="py-1 product__card--col" key={`related-${bottle.product_id}`}>
                                     <Link to={`/wines/${bottle.product_id}`}>
-                                        <Card key={bottle.product_id} className="product__card">
+                                        <Card className="product__card">
                                             <Card.Img src={bottle.product_image} alt={bottle.product_name}/>
                                             <Card.ImgOverlay className="product__card--overview">
                                             <h3>{bottle.product_name}</h3>
