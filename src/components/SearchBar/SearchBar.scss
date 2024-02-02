@@ -1,3 +1,33 @@
 @use '../../styles/partials/globals';
 @use '../../styles/partials/variables' as *;
 @use '../../styles/partials/mixins' as *;
+
+.form {
+  background-color: $Secondary-beige;
+  @include border-top;
+
+  &__group {
+    display: flex;
+    padding: 0.5rem 5rem 0.5rem 0;
+    justify-content: flex-end;
+  }
+
+  &__label {
+    width: 70%;
+  }
+
+  &__input {
+    width: 100%;
+
+    &:focus {
+      outline: none;
+      border: black 2px solid;
+    }
+  }
+}
+
+.results {
+  max-width: none;
+  margin: 0;
+  background-color: $Secondary-beige;
+}

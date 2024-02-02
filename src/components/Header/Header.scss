@@ -9,6 +9,9 @@
   z-index: 1;
   top: 0;
 
+  &__wrapper {
+    margin-right: 0;
+  }
   &__heading {
     @include font-header;
     text-decoration: none;
