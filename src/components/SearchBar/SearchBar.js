@@ -8,7 +8,7 @@ const baseUrl = process.env.REACT_APP_BASE_URL;
 const searchProducerUrl = `${baseUrl}producers/search?s=`;
 const searchProductsUrl = `${baseUrl}products/search?s=`;
 
-const SearchBar = ({open}) => {
+const SearchBar = ({open, onCloseSearch}) => {
   const [searchInput, setSearchInput] = useState("");
   const [producerResults, setProducerResults] = useState([]);
   const [productsResults, setProductsResults] = useState([]);
@@ -47,6 +47,10 @@ const SearchBar = ({open}) => {
     }
   }, [open]);
 
+  const handleSearchResultClick = () => {
+    onCloseSearch();
+  };
+
 
 return (
   <section className="search">
@@ -80,6 +84,7 @@ return (
                   <Link
                     className="results__link"
                     to={`producers/${producer.producer_id}`}
+                    onClick={handleSearchResultClick}
                   >
                     <p>{producer.producer_name}</p>
                   </Link>
@@ -101,7 +106,9 @@ return (
               <ul className="results__list">Products Results
               {productsResults.map((product) => (
                 <li className="results__item" key={product.product_id}>
-                  <Link className="results__link"  to={`/wines/${product.product_id}`}>
+                  <Link className="results__link"  
+                  to={`/wines/${product.product_id}`}
+                  onClick={handleSearchResultClick}>
                     <p>{product.product_name}</p>
                   </Link>
                 </li>

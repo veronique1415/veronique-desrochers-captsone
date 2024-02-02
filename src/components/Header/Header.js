@@ -9,6 +9,11 @@ import SearchBar from "../SearchBar/SearchBar"
 
 const Header = () => {
     const [open, setOpen] = useState(false);
+
+    const handleCloseSearch = () => {
+        setOpen(false);
+      };
+
     return (
         <>
         <header className="header">
@@ -31,7 +36,7 @@ const Header = () => {
                     </Row>
                 </Container>   
             </nav>
-            <SearchBar open={open}/> 
+            <SearchBar open={open} onCloseSearch={handleCloseSearch}/> 
         </header>
         </>
     )
