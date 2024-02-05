@@ -76,7 +76,7 @@ const MapComp = () => {
                 <li className="map__items" onClick={() => vpSetOpen(true)}>Le Vin Papillon
                 <p className="mobile--map"><a className="map__address" href="https://www.google.com/maps/place/Le+Vin+Papillon/@45.4827888,-73.5804421,17z/data=!3m1!4b1!4m6!3m5!1s0x4cc91a7a207c556d:0xa0e82d6c52920693!8m2!3d45.4827889!4d-73.5755712!16s%2Fg%2F1pp2v0bx5?entry=ttu">2519 R. Notre Dame O, Montréal, QC H3J 1N4</a></p>
                 </li>
-                <li className="map__items" onClick={() => noSetOpen(true)}>Nora noraGray
+                <li className="map__items" onClick={() => noSetOpen(true)}>Nora Gray
                 <p className="mobile--map"><a className="map__address" href="https://www.google.com/maps/place/Nora+Gray/@45.4931762,-73.5711147,17z/data=!3m1!4b1!4m6!3m5!1s0x4cc91a665a231fa1:0xe2e7b9bb0b03791a!8m2!3d45.4931762!4d-73.5685398!16s%2Fg%2F1hc75pmfq?entry=ttu">1391 Rue Saint-Jacques, Montréal, QC H3C 1H2</a></p>
                 </li>
                 <li className="map__items" onClick={() => elSetOpen(true)}>Elena
