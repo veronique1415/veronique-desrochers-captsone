@@ -13,7 +13,7 @@ import "./Map.scss"
 
 const MapComp = () => {
   //position for map and restaurants locations
-  const position = { lat: 45.508888, lng: -73.561668 };
+  const position = { lat: 45.52910232543945, lng: -73.6109848022461 };
   const vinMonLapin = { lat: 45.53300094604492, lng: -73.61061096191406};
   const salleClim = { lat: 45.53026580810547, lng: -73.60887908935547};
   const caveDeMamie = { lat: 45.53306198120117, lng: -73.60564422607422};
@@ -89,7 +89,7 @@ const MapComp = () => {
         </div>
       <APIProvider apiKey={process.env.REACT_APP_GOOGLE_MAPS_KEY}>
         <div className="map tablet--map">
-          <Map zoom={14} center={position} mapId={process.env.REACT_APP_GOOGLE_MAPS_STYLE}>
+          <Map zoom={12} center={position} mapId={process.env.REACT_APP_GOOGLE_MAPS_STYLE}>
             <AdvancedMarker position={vinMonLapin} onClick={() => vlSetOpen(true)}>
               <Pin />
             </AdvancedMarker>
