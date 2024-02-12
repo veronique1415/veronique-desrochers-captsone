@@ -30,6 +30,7 @@
   }
 
   &--input {
+    @extend .form__login--label;
     &:focus {
       outline: none;
       border: black 2px solid;

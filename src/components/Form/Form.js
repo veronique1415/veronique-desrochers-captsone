@@ -4,11 +4,11 @@ import "./Form.scss";
 
 const FormComp = () => {
   return (
-    <Form horizontal className="py-5 form__login">
+    <Form horizontal className="py-2 form__login">
   <FormGroup className="form__login--group">
     <FormLabel className="form__login--label">
       Email
-      <Col sm={10}>
+      <Col>
       <FormControl type="email" placeholder="Email" className="form__login--input"/>
       <FormControl.Feedback />
     </Col>
@@ -18,7 +18,7 @@ const FormComp = () => {
   <FormGroup className="form__login--group">
     <FormLabel className="form__login--label">
       Password
-      <Col sm={10}>
+      <Col>
       <FormControl type="password" placeholder="Password" className="form__login--input"/>
       <FormControl.Feedback />
     </Col>

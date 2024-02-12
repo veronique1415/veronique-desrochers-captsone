@@ -3,6 +3,8 @@
 @use '../../styles/partials/mixins' as *;
 
 .login {
+  min-height: 80svh;
+
   &__form {
     background-color: $Pale-beige;
     padding: 2rem;
@@ -13,5 +15,9 @@
     align-items: center;
     flex-direction: column;
     @include border-all;
+
+    &--heading {
+      @include font-section;
+    }
   }
 }
