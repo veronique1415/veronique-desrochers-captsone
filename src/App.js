@@ -11,8 +11,10 @@ import NotFoundPage from "./pages/NotFoundPage/NotFoundPage"
 import Footer from './components/Footer/Footer';
 import 'bootstrap/dist/css/bootstrap.min.css'
 import { useLayoutEffect } from 'react';
+import { AdminLoginPage } from './pages/AdminLoginPage/AdminLoginPage';
 import { BrowserRouter, Routes, Route, useLocation } from 'react-router-dom';
 import './App.scss';
+
 
 
 
@@ -40,6 +42,7 @@ function App() {
           <Route path='/wines' element={<WinesPage />} />
           <Route path='/wines/:wineId' element={<WineDetailsPage />} />
           <Route path='/*' element={<NotFoundPage />} />
+          <Route path='/Login' element={<AdminLoginPage />}/>
        </Routes>
         <Footer />
       </Wrapper>

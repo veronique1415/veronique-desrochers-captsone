@@ -1,29 +1,32 @@
-import { Form, FormGroup, FormControl, Col, ControlLabel, Button } from "react-bootstrap";
+import Button from "../Button/Button";
+import { Form, FormGroup, FormControl, Col, FormLabel } from "react-bootstrap";
 import "./Form.scss";
 
 const FormComp = () => {
   return (
-    <Form horizontal>
-  <FormGroup controlId="formHorizontalEmail">
-    <Col componentClass={ControlLabel} sm={2}>
+    <Form horizontal className="py-5 form__login">
+  <FormGroup className="form__login--group">
+    <FormLabel className="form__login--label">
       Email
-    </Col>
-    <Col sm={10}>
+      <Col sm={10}>
       <FormControl type="email" placeholder="Email" />
+      <FormControl.Feedback />
     </Col>
+    </FormLabel>
   </FormGroup>
 
-  <FormGroup controlId="formHorizontalPassword">
-    <Col componentClass={ControlLabel} sm={2}>
+  <FormGroup className="form__login--group">
+    <FormLabel className="form__login--label">
       Password
-    </Col>
-    <Col sm={10}>
+      <Col sm={10}>
       <FormControl type="password" placeholder="Password" />
+      <FormControl.Feedback />
     </Col>
+    </FormLabel>
   </FormGroup>
-  <FormGroup>
-    <Col smOffset={2} sm={10}>
-      <Button type="submit">Sign in</Button>
+  <FormGroup className="form__login--group">
+    <Col className="form__button--container">
+      <Button type={"submit"} text={"Sign in"} className={"pale-beige"}/>
     </Col>
   </FormGroup>
 </Form>

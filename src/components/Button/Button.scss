@@ -1,0 +1,17 @@
+@use '../../styles/partials/globals';
+@use '../../styles/partials/variables' as *;
+@use '../../styles/partials/mixins' as *;
+
+.button {
+  @include font-body;
+  height: 1.9rem;
+  width: 12.5rem;
+  background-color: $Secondary-beige;
+  @include tablet {
+    height: 2.375rem;
+  }
+
+  &:hover {
+    background-color: $Dark-beige;
+  }
+}

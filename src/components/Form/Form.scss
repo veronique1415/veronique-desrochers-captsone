@@ -1,3 +1,28 @@
 @use '../../styles/partials/globals';
 @use '../../styles/partials/variables' as *;
 @use '../../styles/partials/mixins' as *;
+
+.form__button--container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-right: 2rem;
+}
+
+.form__login {
+  border-top: none;
+  background-color: $Primary-beige;
+
+  &--group {
+    display: flex;
+    justify-content: center;
+    padding: 0.5rem 0;
+  }
+
+  &--label {
+    min-width: 300px;
+    @include tablet {
+      width: 320px;
+    }
+  }
+}
