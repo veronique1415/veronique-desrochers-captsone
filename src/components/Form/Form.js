@@ -9,7 +9,7 @@ const FormComp = () => {
     <FormLabel className="form__login--label">
       Email
       <Col sm={10}>
-      <FormControl type="email" placeholder="Email" />
+      <FormControl type="email" placeholder="Email" className="form__login--input"/>
       <FormControl.Feedback />
     </Col>
     </FormLabel>
@@ -19,7 +19,7 @@ const FormComp = () => {
     <FormLabel className="form__login--label">
       Password
       <Col sm={10}>
-      <FormControl type="password" placeholder="Password" />
+      <FormControl type="password" placeholder="Password" className="form__login--input"/>
       <FormControl.Feedback />
     </Col>
     </FormLabel>

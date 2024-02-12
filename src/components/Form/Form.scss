@@ -6,12 +6,15 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  padding-right: 2rem;
+
+  @include tablet {
+    padding-right: 3rem;
+  }
 }
 
 .form__login {
   border-top: none;
-  background-color: $Primary-beige;
+  background-color: $Pale-beige;
 
   &--group {
     display: flex;
@@ -20,9 +23,16 @@
   }
 
   &--label {
-    min-width: 300px;
+    min-width: 200px;
     @include tablet {
       width: 320px;
+    }
+  }
+
+  &--input {
+    &:focus {
+      outline: none;
+      border: black 2px solid;
     }
   }
 }
