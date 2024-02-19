@@ -14,6 +14,7 @@ import { useLayoutEffect } from 'react';
 import { AdminLoginPage } from './pages/AdminLoginPage/AdminLoginPage';
 import { BrowserRouter, Routes, Route, useLocation } from 'react-router-dom';
 import './App.scss';
+import AdminDashboardPage from './pages/AdminDashboardPage/AdminDashboardPage';
 
 
 
@@ -42,7 +43,8 @@ function App() {
           <Route path='/wines' element={<WinesPage />} />
           <Route path='/wines/:wineId' element={<WineDetailsPage />} />
           <Route path='/*' element={<NotFoundPage />} />
-          <Route path='/Login' element={<AdminLoginPage />}/>
+          <Route path='/login' element={<AdminLoginPage />}/>
+          <Route path='/dashboard' element={<AdminDashboardPage />}/>
        </Routes>
         <Footer />
       </Wrapper>
