@@ -32,7 +32,7 @@ export const AdminLoginPage = () => {
   }
   return (
     <main className="login">
-        <Banner text={"Admin Dashboard"}/>
+        <Banner text={"Log in to the Admin Dashboard"}/>
         <section className="login__form">
             <h2 className="login__form--heading">Cool you're back, Larry!</h2>
             <h3 className="login__form--heading">Come on in</h3>
