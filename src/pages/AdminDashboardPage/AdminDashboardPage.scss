@@ -1,0 +1,15 @@
+@use '../../styles/partials/globals';
+@use '../../styles/partials/variables' as *;
+@use '../../styles/partials/mixins' as *;
+
+.dashboard {
+  &__paragraph {
+    @include font-subheader;
+    &--container {
+      display: flex;
+      text-align: center;
+      justify-content: center;
+      align-items: center;
+    }
+  }
+}

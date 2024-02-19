@@ -1,10 +1,10 @@
 import Button from "../Button/Button";
 import { Form, FormGroup, FormControl, Col, FormLabel } from "react-bootstrap";
-import "./Form.scss";
+import "./LoginForm.scss";
 
 
 
-const FormComp = ({handleSubmit, error}) => {
+const LoginForm = ({handleSubmit, error}) => {
   
   return (
     <Form className="py-2 form__login" onSubmit={handleSubmit}>
@@ -37,4 +37,4 @@ const FormComp = ({handleSubmit, error}) => {
   )
 };
 
-export default FormComp;
+export default LoginForm;

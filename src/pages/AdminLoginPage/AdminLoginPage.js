@@ -1,5 +1,5 @@
 import Banner from "../../components/Banner/Banner";
-import FormComp from "../../components/Form/Form";
+import LoginForm from "../../components/LoginForm/LoginForm";
 import { useNavigate } from "react-router-dom";
 import { useState } from "react";
 import axios from "axios";
@@ -22,7 +22,6 @@ export const AdminLoginPage = () => {
         email: event.target.email.value,
         password: event.target.password.value
       })
-      console.log(response.data);
       sessionStorage.setItem("token", response.data.token)
       navigate("/dashboard")
 
@@ -36,7 +35,7 @@ export const AdminLoginPage = () => {
         <section className="login__form">
             <h2 className="login__form--heading">Cool you're back, Larry!</h2>
             <h3 className="login__form--heading">Come on in</h3>
-        <FormComp handleSubmit={handleSubmit} error={error} />
+        <LoginForm handleSubmit={handleSubmit} error={error} />
         </section>
     </main>
   )

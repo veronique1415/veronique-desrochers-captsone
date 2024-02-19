@@ -1,0 +1,14 @@
+@use '../../styles/partials/globals';
+@use '../../styles/partials/variables' as *;
+@use '../../styles/partials/mixins' as *;
+
+.accordion-button {
+  @include font-subheader;
+  font-weight: 600;
+  background-color: $Pale-beige;
+
+  &:not(.collapsed) {
+    color: black;
+    background-color: $Secondary-beige;
+  }
+}
