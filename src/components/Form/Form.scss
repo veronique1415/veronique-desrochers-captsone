@@ -36,4 +36,9 @@
       border: black 2px solid;
     }
   }
+
+  &__error {
+    @include font-body;
+    color: red;
+  }
 }

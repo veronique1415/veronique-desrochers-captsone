@@ -36,7 +36,7 @@ export const AdminLoginPage = () => {
         <section className="login__form">
             <h2 className="login__form--heading">Cool you're back, Larry!</h2>
             <h3 className="login__form--heading">Come on in</h3>
-        <FormComp handleSubmit={handleSubmit} />
+        <FormComp handleSubmit={handleSubmit} error={error} />
         </section>
     </main>
   )

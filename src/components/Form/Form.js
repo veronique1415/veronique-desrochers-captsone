@@ -4,7 +4,7 @@ import "./Form.scss";
 
 
 
-const FormComp = ({handleSubmit}) => {
+const FormComp = ({handleSubmit, error}) => {
   
   return (
     <Form className="py-2 form__login" onSubmit={handleSubmit}>
@@ -32,6 +32,7 @@ const FormComp = ({handleSubmit}) => {
       <Button type={"submit"} text={"Sign in"} className={"pale-beige"}/>
     </Col>
   </FormGroup>
+  {error && <p className="form__error">{error}</p>}
 </Form>
   )
 };
